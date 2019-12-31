@@ -425,7 +425,7 @@ blockquote {
 [role="banner"] {
     // Includes global navigation, logo, and tagline at top of document
     @include clearfix;
-    background: $green-dark;
+    background: #232f3e;
     overflow: hidden;
     margin: 0;
     padding: 10px 0 6px;
@@ -460,7 +460,7 @@ blockquote {
     .logo {
         @include font-size(40);
         @include sans-serif;
-        background: url(../img/logo-django.png) 0 0 no-repeat;
+        background: url(../img/logo-fagolabs.png) 0 0 no-repeat;
         color: #FFF;
         display: block;
         float: left;
@@ -473,11 +473,12 @@ blockquote {
         height: 36px;
 
         .mdzr-svg & { // deliver svg logo if applicable
-            background: url(../img/logo-django.svg) center center no-repeat;
+            background: url(../img/logo-fagolabs.svg) center center no-repeat;
         }
 
         @include respond-min(768px) {
             margin-left: 0;
+            margin-right: 40px;
         }
     }
 
@@ -534,13 +535,13 @@ blockquote {
     }
 
     [role="navigation"] {
-        background: $green-dark;
+        background: #232f3e;
 
         width: 100%;
 
         @include respond-min(768px) {
             width: auto;
-            float: right;
+            float: left;
         }
 
         ul {
@@ -708,7 +709,8 @@ blockquote {
 
     .homepage & {
         padding: 50px 0;
-        background: white;
+        //background: white;
+        background: url(../img/background.png) center center no-repeat;
         text-align: center;
         border-bottom: 1px solid $gray-line;
         p {
@@ -838,7 +840,7 @@ blockquote {
     @include clearfix;
     @include sans-serif;
     position: relative;
-    background: $green-medium;
+    background: #232f3e;
     clear: both;
     margin-top: 0px;
 
@@ -941,7 +943,7 @@ blockquote {
     .logo {
         @include font-size(40);
         @include sans-serif;
-        background: url(../img/logo-django.png) 0 0 no-repeat;
+        background: url(../img/logo-fagolabs.png) 0 0 no-repeat;
         color: $green-dark;
         display: block;
         font-weight: 700;
@@ -957,7 +959,7 @@ blockquote {
         }
 
         .mdzr-svg & {
-            background: url(../img/logo-django.svg) center center no-repeat;
+            background: url(../img/logo-fagolabs.svg) center center no-repeat;
             height: 39px;
             width: 109px;
         }
