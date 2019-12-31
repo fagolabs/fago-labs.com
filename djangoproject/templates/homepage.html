@@ -3,100 +3,77 @@
 
 {% block sectionid %}homepage{% endblock %}
 {% block body_class %}homepage{% endblock %}
-{% block layout_class %}sidebar-right{% endblock %}
-
+{% block layout_class %}full-width{% endblock %}
+{% block header-classes%}product-def{% endblock %}
 {% block header %}
-    <h1 class="visuallyhidden">Django</h1>
-    <p>
-        <em>Django makes it easier to build better Web apps more quickly and with less code.</em>
-    </p>
-    <p>
-        <a href="{% url 'start' %}" class="cta">Get started with Django</a>
-    </p>
-    {% comment %}
-        <p class="small">
-            Used by these great companies, and many more
-            <ul class="django-companies">
-              <li><a href="{% url 'case_study' %}" class="company-mozilla">Mozilla</a></li>
-              <li><a href="{% url 'case_study' %}" class="company-pinterest">Pinterest</a></li>
-              <li><a href="{% url 'case_study' %}" class="company-theguardian">The Guardian</a></li>
-              <li><a href="{% url 'case_study' %}" class="company-instagram">Instagram</a></li>
-              <li><a href="{% url 'case_study' %}" class="company-rdio">Rdio</a></li>
-            </ul>
-        </p>
-    {% endcomment %}
+<div class="container">
+  <div class="row pt-5 pb-4">
+    <div class="col-12 col-sm-12 col-md-6 ">
+      <div >
+        <h1 class="bold mb-3">
+          Django
+        </h1>
+      </div>
+      <div class="row">
+        <h3 class="des ml-3 mr-3">
+          Our mission is to be the most secure, performant, scalable, and
+          available cloud native repository for Kubernetes
+        </h3>
+      </div>
+      <div class="row">
+        <div class="center">
+          <a href="#getting-start" id="special">Button 1</a>
+        <a
+          href="#button2"
+          target="_blank"
+          id="special1"
+          >Button 2</a
+        >
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-12 col-md-6 mt-3" style="background-color: rgb(165, 135, 135); height: 30rem;">
+    </div>
+  </div>
+</div>
 {% endblock %}
 
 {% block content %}
-    <div class="section">
-        <h1>Meet Django</h1>
-        <p>
-          Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design.
-          Built by experienced developers, it takes care of much of the hassle of Web development, so you can focus
-          on writing your app without needing to reinvent the wheel. It’s free and open source.
-        </p>
-        <dl class="list-features">
-          <dt><i class="icon icon-bolt"></i> Ridiculously fast.</dt>
-          <dd>
-            <p>Django was designed to help developers take applications from concept to completion as quickly as possible.</p>
-          </dd>
-
-          <dt><i class="icon icon-lock"></i> Reassuringly secure.</dt>
-          <dd>
-            <p>Django takes security seriously and helps developers avoid many common security mistakes.</p>
-          </dd>
-
-          <dt><i class="icon icon-dashboard"></i> Exceedingly scalable.</dt>
-          <dd>
-            <p>Some of the busiest sites on the Web leverage Django’s ability to quickly and flexibly scale.</p>
-          </dd>
-        </dl>
-
-        <a href="{% url 'overview' %}" class="cta outline">Learn more about Django</a>
+    <div class="section content">
+      <div class="row">
+        <div class="col-4">
+          <div class="parent" onclick="">
+            <div class="child bg-one">
+              <div style="">
+                <a href="#">Los Angeles</a>
+              </div>
+            </div>
+        </div>
+        </div>
+       <div class="col-4">
+        <div class="parent" onclick="">
+          <div class="child bg-two">
+              <a href="#">Holywood</a>
+          </div>
+      </div>
+       </div>
+        <div class="col-4">
+          <div class="parent" onclick="">
+            <div class="child bg-three">
+                <a href="#">Dubai</a>
+            </div>
+        </div>
+        </div>
+      </div>
     </div>
 
-    {% comment %}
-
     <div class="section">
-        <h1>Who is Django for?</h1>
-
-        <p>
-          You’ve probably used a site that uses Django. Find out why Django was the right solution for these organizations, and why you should start building your project with Django today.
-        </p>
-
-        <ul class="list-case-study">
-          <li>
-            <h3 class="logo" title="Mozilla">Mozilla</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
-            <a href="{% url 'case_study' %}">Read Case Study</a>
-          </li>
-          <li>
-            <h3 class="logo" title="Disqus">Disqus</h3>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <a href="{% url 'case_study' %}">Read Case Study</a>
-          </li>
-          <li>
-            <h3 class="logo" title="Knight Foundation">Knight Foundation</h3>
-            <p>When the Knight Foundation began redesigning their <a href="https://www.knightfoundation.org">site</a>, they were on multiple content management systems they’d outgrown, with a site that couldn’t handle traffic spikes. Knight needed a future-proof solution.</p>
-            <a href="{% url 'case_study' %}">Read Case Study</a>
-          </li>
-        </ul>
-
-        <a href="{% url 'case_study_index' %}" class="cta outline">See all case studies</a>
-
-    </div>
-
-    {% endcomment %}
-
-    <div class="section">
-    <h1>Stay in the loop</h1>
-    <p>Subscribe to one of our mailing lists to stay up to date with everything in the Django community:</p>
-    {% include "includes/mailing_lists.html" %}
+    
     </div>
 
     <!-- END #content-secondary -->
 {% endblock %}
-
+{% comment %}
 {% block content-related %}
   <div role="complementary">
       <a href="{% url 'download' %}" class="cta">
@@ -156,23 +133,10 @@
         <dd></dd>
       </dl>
       <a href="/foundation/" class="link-readmore">More about the DSF</a>
-      {% comment %}
-      <h3>Upcoming Events</h3>
-      <dl class="list-links-small news-list">
-        <dt class="event"><a href="#">DjangoCon 2013 Call for Papers</a></dt>
-        <dd>
-          April 7th, 2013 | Berlin, Germany
-        </dd>
-
-        <dt class="event"><a href="#">DjangoCon 2013 Call for Papers</a></dt>
-        <dd>April 7th, 2013 | Berlin, Germany</dd>
-      </dl>
-      <a href="{% url 'weblog:index' %}" class="link-readmore">See all Events</a>
-      {% endcomment %}
   </div>
 
 {% endblock %}
-
+{% endcomment %}
 {% block alert %}
   {% comment %}
   <div role="alert">

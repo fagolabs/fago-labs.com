@@ -52,6 +52,7 @@ urlpatterns = [
 
     path('contact/', include('contact.urls')),
     path('foundation/minutes/', include('foundation.urls.meetings')),
+    path('foundation/',TemplateView.as_view(template_name='base_foundation.html'),name='foundation'),
     path('foundation/', include('members.urls')),
     path('fundraising/', include('fundraising.urls')),
 
