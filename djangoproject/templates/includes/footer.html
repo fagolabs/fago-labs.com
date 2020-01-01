@@ -1,46 +1,49 @@
-
 <div role="contentinfo">
   <div class="subfooter">
     <div class="container">
-      <h1 class="visuallyhidden">Django Links</h1>
+      <div class="row">
+        <div class="col-7">
+          <div class="row">
+            <div class="col-12 col-md-12 col-lg-4">
+              <h2>Solutions For</h2>
+              <p>This is test sentences</p>
+            </div>
+            <div class="col-12 col-md-12 col-lg-4">
+              <h2>Products</h2>
+              <p>This is test sentences</p>
+            </div>
+            <div class="col-12 col-md-12 col-lg-4">
+              <h2>About Us</h2>
+              <p>This is test sentences</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-12 col-lg-4">
+              <h2>Resources</h2>
+              <p>This is test sentences</p>
+            </div>
+            <div class="col-12 col-md-12 col-lg-4">
+              <h2>Support</h2>
+              <p>This is test sentences</p>
+            </div>
+          </div>
+        </div>
 
-      <div class="col learn">
-        <h2>Learn More</h2>
-        <ul>
-          <li><a href="{% url 'overview' %}">About Django</a></li>
-          {% comment %}<li><a href="{% url 'case_study_index' %}">Case Studies</a></li>{% endcomment %}
-          <li><a href="{% url 'start' %}">Getting Started with Django</a></li>
-          <li><a href="{% url 'document-detail' lang='en' version='dev' url="internals/organization" host 'docs'%}">Team Organization</a></li>
-          <li><a href="{% url 'homepage' %}foundation/">Django Software Foundation</a></li>
-          <li><a href="{% url 'code_of_conduct' %}">Code of Conduct</a></li>
-          <li><a href="{% url 'diversity' %}">Diversity Statement</a></li>
-        </ul>
+        <div class="col-5 follow last-child">
+          <h2>Our Mission</h2>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially.
+          </p>
+        </div>
       </div>
-
-      <div class="col involved">
-        <h2>Get Involved</h2>
-        <ul>
-          <li><a href="{% url 'community-index' %}">Join a Group</a></li>
-          <li><a href="{% url 'document-detail' lang='en' version='dev' url="internals/contributing" host 'docs' %}">Contribute to Django</a></li>
-          <li><a href="{% url 'document-detail' lang='en' version='dev' url="internals/contributing/bugs-and-features" host 'docs' %}">Submit a Bug</a></li>
-          <li><a href="{% url 'document-detail' lang='en' version='dev' url="internals/security" host 'docs' %}#reporting-security-issues">Report a Security Issue</a></li>
-        </ul>
-      </div>
-
-      <div class="col follow last-child">
-        <h2>Follow Us</h2>
-        <ul>
-          <li><a href="https://github.com/django">GitHub</a></li>
-          <li><a href="https://twitter.com/djangoproject">Twitter</a></li>
-          <li><a href="{% url 'weblog-feed' %}">News RSS</a></li>
-          <li><a href="https://groups.google.com/forum/#!forum/django-users">Django Users Mailing List</a></li>
-        </ul>
-      </div>
-
     </div>
-  </div>
 
-  <div class="footer">
+    <!-- <div class="footer">
     <div class="container">
       <div class="footer-logo">
         <a class="logo" href="{% url 'homepage' %}">Django</a>
@@ -58,6 +61,6 @@
         trademark</a> of the Django Software Foundation.
       </p>
     </div>
+  </div> -->
   </div>
-
 </div>

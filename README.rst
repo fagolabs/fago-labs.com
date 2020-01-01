@@ -1,5 +1,11 @@
-fagolabs.com source code
+djangoproject.com source code
 =============================
+
+.. image:: https://travis-ci.org/django/djangoproject.com.svg?branch=master
+    :target: https://travis-ci.org/django/djangoproject.com
+
+.. image:: https://coveralls.io/repos/django/djangoproject.com/badge.svg?branch=master
+    :target: https://coveralls.io/r/django/djangoproject.com?branch=master
 
 To run locally, do the usual:
 

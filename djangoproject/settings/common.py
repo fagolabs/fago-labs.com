@@ -34,7 +34,7 @@ DATABASES = {
         'NAME': 'djangoproject',
         'USER': 'djangoproject',
         'HOST': SECRETS.get('db_host', ''),
-        'PASSWORD': SECRETS.get('db_password', ''),
+        'PASSWORD': SECRETS.get('db_password', 'secret'),
         'PORT': SECRETS.get('db_port', ''),
     },
     'trac': {
@@ -42,7 +42,7 @@ DATABASES = {
         'NAME': 'code.djangoproject',
         'USER': 'code.djangoproject',
         'HOST': SECRETS.get('trac_db_host', ''),
-        'PASSWORD': SECRETS.get('trac_db_password', ''),
+        'PASSWORD': SECRETS.get('trac_db_password', 'secret'),
         'PORT': SECRETS.get('trac_db_port', ''),
     }
 }
