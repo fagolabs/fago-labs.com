@@ -1,0 +1,75 @@
+{% extends "base_3col.html" %}
+
+{% block sectionid %}team{% endblock %}
+{% block body_class %}team{% endblock %}
+{% block layout_class %}full-width{% endblock %}
+
+{% block header %}
+<div class="bg-team">
+    <div class="pt-5">
+        <h1>Đội ngũ Fago Labs</h1>
+        <h2>Cố gắng mỗi ngày - Thành công sẽ đến</h2>
+        <a href="{% url 'about:join' %}" class="btn btn-danger btn-lg mt-4" role="button">
+            JOIN WITH US
+        </a>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row pt-5 pb-5">
+            <div class="col-md-4 pb-5">
+                <div class="avatar">
+                    <a href="#">
+                        <img src=http://www.djangoproject.localhost:8000/s/img/avatars/dungnm.png width="128" class="pb-4">
+                        <h5>Nguyễn Minh Dũng</h5>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4 pb-5">
+                <div class="avatar">
+                    <a href="#">
+                        <img src=http://www.djangoproject.localhost:8000/s/img/avatars/haidh.png width="128" class="pb-4">
+                        <h5>Dương Hoàng Hải</h5>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4 pb-5">
+                <div class="avatar">
+                    <a href="https://www.linkedin.com/in/anh-nguyen-ngoc-527744136">
+                        <img src=http://www.djangoproject.localhost:8000/s/img/avatars/anhnn.png width="128" class="pb-4">
+                        <h5>Nguyễn Ngọc Anh</h5>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row pb-5">
+            <div class="col-md-4 pb-5">
+                <div class="avatar">
+                    <a href="#">
+                        <img src=http://www.djangoproject.localhost:8000/s/img/avatars/hoangnx.png width="128" class="pb-4">
+                        <h5>Nguyễn Xuân Hoàng</h5>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4 pb-5">
+                <div class="avatar">
+                    <a href="#">
+                        <img src=http://www.djangoproject.localhost:8000/s/img/avatars/cuongtx.png width="128" class="pb-4">
+                        <h5>Trần Xuân Cường</h5>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4 pb-5">
+                <div class="avatar">
+                    <a href="#">
+                        <img src=http://www.djangoproject.localhost:8000/s/img/avatars/huongtt.png width="128" class="pb-4">
+                        <h5>Trần Thu Hương</h5>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

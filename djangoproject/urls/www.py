@@ -82,6 +82,9 @@ urlpatterns = [
     path('download/', include('releases.urls')),
     path('svntogit/', include('svntogit.urls')),
     path('', include('legacy.urls')),
+
+    # About
+    path('about/', include('about.urls')),
 ]
 
 if settings.DEBUG:
