@@ -7,18 +7,23 @@
       <ul>
         <div style="float: left !important;">
           <li{% if 'start' in request.path %} class="active"{% endif %} >
+            <a href="{% url 'overview' %}">Research</a>
+          </li>
+          <li{% if 'start' in request.path %} class="active"{% endif %} >
             <a href="{% url 'overview' %}">Solutions</a>
           </li>
           <li{% if 'download' in request.path %} class="active"{% endif %}>
-            <a href="{% url 'download' %}">Products</a>
+            <a href="{% url 'download' %}">Services</a>
           </li>
           <li{% if request.host.name == 'docs' %} class="active"{% endif %}>
-            <a href="{% url 'homepage' host 'docs' %}">Resources</a>
+            <a href="{% url 'homepage' host 'docs' %}">News</a>
           </li>
           <li{% if 'weblog' in request.path %} class="active"{% endif %}>
-            <a href="{% url 'weblog:index' %}">Pricing</a>
+            <a href="{% url 'weblog:index' %}">Blog</a>
           </li>
-          
+          <li{% if 'start' in request.path %} class="active"{% endif %} >
+            <a href="{% url 'overview' %}">About</a>
+          </li>
         </div>
         <div style="float: right;">
           <!-- <li{% if 'foundation' in request.path %} class="active"{% endif %}>

@@ -64,14 +64,14 @@
 
     {% include "includes/header.html" %}
 
-    <div class="copy-banner">
+    <div class="copy-banner" style="margin-top: 7rem;">
       <div class="container {% block header-classes %}{% endblock %}">
         {% block header %}{% endblock %}
       </div>
     </div>
     <div id="billboard">{% block billboard %}{% endblock %}</div>
 
-    <div class="container {% block layout_class %}{% endblock %}">
+    <div style="margin-top: 7rem;" class="container {% block layout_class %}{% endblock %}">
       <div role="main">
 
         {% block messages %}
