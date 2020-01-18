@@ -1,15 +1,15 @@
 {% extends "base_3col.html" %}
 {% load weblog fundraising_extras %}
-
+{% load static %}
 {% block sectionid %}homepage{% endblock %}
 {% block body_class %}homepage{% endblock %}
 {% block layout_class %}full-width{% endblock %}
 {% block header-classes%}product-def{% endblock %}
 {% block header %}
-<div class="container">
+<div class="container" style="overflow:hidden">
   <div class="row pt-5 pb-4">
     <div class="col-12 col-sm-12 col-md-6 ">
-      <div >
+      <div>
         <h1 class="bold mb-3">
           Django
         </h1>
@@ -20,138 +20,524 @@
           available cloud native repository for Kubernetes
         </h3>
       </div>
-      <div class="row">
-        <div class="center">
-          <a href="#getting-start" id="special">Button 1</a>
-        <a
-          href="#button2"
-          target="_blank"
-          id="special1"
-          >Button 2</a
-        >
-        </div>
+      <div class="center">
+        <a href="#getting-start" id="special">Button 1</a>
+        <a href="#button2" target="_blank" id="special1">Button 2</a>
       </div>
     </div>
-    <div class="col-12 col-sm-12 col-md-6 mt-3" style="background-color: rgb(165, 135, 135); height: 30rem;">
-    </div>
+    <div class="col-12 col-sm-12 col-md-6 mt-3" style="background-color: rgb(165, 135, 135); height: 30rem;"></div>
   </div>
 </div>
 {% endblock %}
 
 {% block content %}
-    <div class="section content">
-      <div class="row">
-        <div class="col-4">
-          <div class="parent" onclick="">
-            <div class="child bg-one">
-              <div style="">
-                <a href="#">Los Angeles</a>
+
+<div class="section mb-5 mt-5">
+  <div class="container carousel-homepage">
+    <h1 class="center mt-5 mb-5">Lab Introduction</h1>
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-12 col-md-12 col-lg-7 img-net1">
+            </div>
+            <div class="col-12 col-md-12 col-lg-5">
+              <p class="net-case ">
+                Harbor provides rich functions in container image management. It
+                solves our challenges of transferring images and Helm charts between
+                container clusters. Harbor does allow us to save a lot of resources in
+                image repository. The community is very active and the features are
+                constantly being improved.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-12 col-md-12 col-lg-5">
+              <p class="net-case ">
+                Through Harbor’s Web UI, we can conveniently manage the access rights
+                of projects, members and images. We take advantage of Harbor’s remote
+                replication features to create replicas of image repository in data
+                centers across different regions.
+              </p>
+            </div>
+            <div class="col-12 col-md-12 col-lg-7 img-net1">
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-12 col-md-12 col-lg-7 img-net1">
+            </div>
+            <div class="col-12 col-md-12 col-lg-5">
+              <p class="net-case ">
+                Through Harbor’s Web UI, we can conveniently manage the access rights
+                of projects, members and images. We take advantage of Harbor’s remote
+                replication features to create replicas of image repository in data
+                centers across different regions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 6.5rem;">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section container content mt-5">
+  <div class="row mt-5">
+    <h1 class="center mt-3">Latest News</h1>
+  </div>
+  <div class="carousel-news mt-5">
+    <div id="news" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row mt-2">
+            <div class="col-12 col-md-12 col-lg-4">
+              <div class="parent" onclick="">
+                <div class="child bg-one">
+                  <div class="inner-text ">
+                    <a href="#" class="title mb-2">
+                      New open release allows theorists to explore
+                    </a>
+                    <div class="text mt-1 mb-5">
+                      <div class="preview-card__category" style="color:">
+                        Physics
+                      </div>
+                      <div class="preview-card__category" style="color:">
+                        News
+                      </div>
+                      <div class="preview-card__date" style="color:">
+                        <time datetime="2020-01-15T15:54:17Z">15 January, 2020</time>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-        </div>
-        </div>
-       <div class="col-4">
-        <div class="parent" onclick="">
-          <div class="child bg-two">
-              <a href="#">Holywood</a>
-          </div>
-      </div>
-       </div>
-        <div class="col-4">
-          <div class="parent" onclick="">
-            <div class="child bg-three">
-                <a href="#">Dubai</a>
+            <div class="col-12 col-md-12 col-lg-4">
+              <div class="parent" onclick="">
+                <div class="child bg-two">
+                  <div class="inner-text ">
+                    <a href="#" class="title mb-2">
+                      Next Generation Web Server - NGWS
+                    </a>
+                    <div class="text mt-1 mb-5">
+                      <div class="preview-card__category" style="color:">
+                        Web
+                      </div>
+                      <div class="preview-card__category" style="color:">
+                        News
+                      </div>
+                      <div class="preview-card__date" style="color:">
+                        <time datetime="2020-01-15T15:54:17Z">15 January, 2020</time>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+            <div class="col-12 col-md-12 col-lg-4">
+              <div class="parent" onclick="">
+                <div class="child bg-three">
+                  <div class="inner-text ">
+                    <a href="#" class="title mb-2">
+                      New open release allows theorists to explore
+                    </a>
+                    <div class="text mt-1 mb-5">
+                      <div class="preview-card__category" style="color:">
+                        Physics
+                      </div>
+                      <div class="preview-card__category" style="color:">
+                        News
+                      </div>
+                      <div class="preview-card__date" style="color:">
+                        <time datetime="2020-01-15T15:54:17Z">15 January, 2020</time>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        <div class="carousel-item">
+          <div class="row mt-2">
+            <div class="col-12 col-md-12 col-lg-4">
+              <div class="parent" onclick="">
+                <div class="child bg-one">
+                  <div class="inner-text ">
+                    <a href="#" class="title mb-2">
+                      New open release allows theorists to explore
+                    </a>
+                    <div class="text mt-1 mb-5">
+                      <div class="preview-card__category" style="color:">
+                        Physics
+                      </div>
+                      <div class="preview-card__category" style="color:">
+                        News
+                      </div>
+                      <div class="preview-card__date" style="color:">
+                        <time datetime="2020-01-15T15:54:17Z">15 January, 2020</time>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-4">
+              <div class="parent" onclick="">
+                <div class="child bg-two">
+                  <div class="inner-text ">
+                    <a href="#" class="title mb-2">
+                      Next Generation Web Server - NGWS
+                    </a>
+                    <div class="text mt-1 mb-5">
+                      <div class="preview-card__category" style="color:">
+                        Web
+                      </div>
+                      <div class="preview-card__category" style="color:">
+                        News
+                      </div>
+                      <div class="preview-card__date" style="color:">
+                        <time datetime="2020-01-15T15:54:17Z">15 January, 2020</time>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-4">
+              <div class="parent" onclick="">
+                <div class="child bg-three">
+                  <div class="inner-text ">
+                    <a href="#" class="title mb-2">
+                      New open release allows theorists to explore
+                    </a>
+                    <div class="text mt-1 mb-5">
+                      <div class="preview-card__category" style="color:">
+                        Physics
+                      </div>
+                      <div class="preview-card__category" style="color:">
+                        News
+                      </div>
+                      <div class="preview-card__date" style="color:">
+                        <time datetime="2020-01-15T15:54:17Z">15 January, 2020</time>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row mt-2">
+            <div class="col-12 col-md-12 col-lg-4">
+              <div class="parent" onclick="">
+                <div class="child bg-one">
+                  <div class="inner-text ">
+                    <a href="#" class="title mb-2">
+                      New open release allows theorists to explore
+                    </a>
+                    <div class="text mt-1 mb-5">
+                      <div class="preview-card__category" style="color:">
+                        Physics
+                      </div>
+                      <div class="preview-card__category" style="color:">
+                        News
+                      </div>
+                      <div class="preview-card__date" style="color:">
+                        <time datetime="2020-01-15T15:54:17Z">15 January, 2020</time>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-4">
+              <div class="parent" onclick="">
+                <div class="child bg-two">
+                  <div class="inner-text ">
+                    <a href="#" class="title mb-2">
+                      Next Generation Web Server - NGWS
+                    </a>
+                    <div class="text mt-1 mb-5">
+                      <div class="preview-card__category" style="color:">
+                        Web
+                      </div>
+                      <div class="preview-card__category" style="color:">
+                        News
+                      </div>
+                      <div class="preview-card__date" style="color:">
+                        <time datetime="2020-01-15T15:54:17Z">15 January, 2020</time>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-4">
+              <div class="parent" onclick="">
+                <div class="child bg-three">
+                  <div class="inner-text ">
+                    <a href="#" class="title mb-2">
+                      New open release allows theorists to explore
+                    </a>
+                    <div class="text mt-1 mb-5">
+                      <div class="preview-card__category" style="color:">
+                        Physics
+                      </div>
+                      <div class="preview-card__category" style="color:">
+                        News
+                      </div>
+                      <div class="preview-card__date" style="color:">
+                        <time datetime="2020-01-15T15:54:17Z">15 January, 2020</time>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 6.5rem;">
+        <ol class="carousel-indicators">
+          <li data-target="#news" data-slide-to="0" class="active"></li>
+          <li data-target="#news" data-slide-to="1"></li>
+          <li data-target="#news" data-slide-to="2"></li>
+        </ol>
+      </div>
+    </div>
+    <div class="view-more mb-4">
+      <a href="blogs">View all news
+        <span><img class="arrow" src="{% static "img/logos/right-arrow.png" %}" /></span>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="container product content mt-5">
+  <h1 class="center">Fagolabs Product</h1>
+  <p class="center mt-3 ">
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+  </p>
+  <div class="row mt-3">
+    <div class="col-sm-6 col-md-3">
+      <div class="test">
+        <div class="test-img">
+          <img class="logo-img" src="https://dn-caicloudui.qbox.caicloud.io/0103061913/img/index/in_se_finance.png"
+            alt=""> </div>
+        <div class="test-text">
+          <h3>fDNS</h3>
+          <p>Compatible with all features of Bind9, Bind10
+            More debug & tracing log types than common Bind versions
+          </p>
+          <a href="/methods/manufacture">Check it out!</a>
         </div>
       </div>
     </div>
+    <div class="col-sm-6 col-md-3">
+      <div class="test">
+        <div class="test-img">
+          <img class="logo-img" src="https://dn-caicloudui.qbox.caicloud.io/0103061913/img/index/in_se_munu.png" alt="">
+        </div>
+        <div class="test-text">
+          <h3>fVPN</h3>
+          <p>fVPN-Enterprise: VPN Server
 
-    <div class="section">
-    
+            fVPN-SaaS: VPN Service</p>
+          <a href="/methods/manufacture">Check it out!</a>
+        </div>
+      </div>
     </div>
+    <div class="col-sm-6 col-md-3">
+      <div class="test">
+        <div class="test-img">
+          <img class="logo-img" src="https://dn-caicloudui.qbox.caicloud.io/0103061913/img/index/in_se_cloud.png"
+            alt="">
+        </div>
+        <div class="test-text">
+          <h3>fWS</h3>
+          <p>FWS Enterprise - Web Server for Enterprise
+            Include:
+            Binary
+            User Guide
+            Deployment Guide
+            FWS Hosting - Solution for Hosting</p>
+          <a href="/methods/manufacture">Check it out!</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-3">
+      <div class="test">
+        <div class="test-img">
+          <img class="logo-img" src="https://dn-caicloudui.qbox.caicloud.io/0103061913/img/index/in_se_con.png" alt="">
+        </div>
+        <div class="test-text">
+          <h3>fSHARK </h3>
+          <p>The best network parser
+          </p>
+          <a href="/methods/manufacture">Check it out!</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col-sm-6 col-md-3">
+      <div class="test">
+        <div class="test-img">
+          <img class="logo-img" src="https://dn-caicloudui.qbox.caicloud.io/0103061913/img/index/in_se_shop.png" alt="">
+        </div>
+        <div class="test-text">
+          <h3>fSAN</h3>
+          <p>Advanced Algorithm for high reliability & performance
+            Unified use & operation flow
+          </p>
+          <a href="/methods/manufacture">Check it out!</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-3">
+      <div class="test">
+        <div class="test-img">
+          <img class="logo-img" src="https://dn-caicloudui.qbox.caicloud.io/0103061913/img/index/in_se_learn.png"
+            alt="">
+        </div>
+        <div class="test-text">
+          <h3>fCINEMA</h3>
+          <p>Online Movie website</p>
+          <a href="" class="disable">!Developing!</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-3">
+      <div class="test">
+        <div class="test-img">
+          <img class="logo-img" src="https://dn-caicloudui.qbox.caicloud.io/0103061913/img/index/in_se_energy.png"
+            alt="">
+        </div>
+        <div class="test-text">
+          <h3>fDICT</h3>
+          <p>Free Dictionary Framework</p>
+          <a href="" class="disable">!Developing!</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-    <!-- END #content-secondary -->
+<!-- END #content-secondary -->
 {% endblock %}
 {% comment %}
 {% block content-related %}
-  <div role="complementary">
-      <a href="{% url 'download' %}" class="cta">
-          Download <em>latest release: {{ DJANGO_VERSION }}</em>
-      </a>
-      <a href="{% block doc_url %}{% url 'homepage' host 'docs' %}{% endblock %}" class="link-readmore">Django documentation</a>
+<div role="complementary">
+  <a href="{% url 'download' %}" class="cta">
+    Download <em>latest release: {{ DJANGO_VERSION }}</em>
+  </a>
+  <a href="{% block doc_url %}{% url 'homepage' host 'docs' %}{% endblock %}" class="link-readmore">Django
+    documentation</a>
 
-      {% donation_snippet %}
+  {% donation_snippet %}
 
-      <h3>Latest news</h3>
-      {% render_latest_blog_entries 2 hide_readmore=True summary_first=True header_tag='h4' %}
-      <a href="{% url 'weblog:index' %}" class="link-readmore">More news</a>
+  <h3>Latest news</h3>
+  {% render_latest_blog_entries 2 hide_readmore=True summary_first=True
+  header_tag='h4' %}
+  <a href="{% url 'weblog:index' %}" class="link-readmore">More news</a>
 
-      <h3>New to Django?</h3>
-      <ul class="list-links-small docs-list">
-          <li><a href="{% url 'document-detail' lang='en' version='stable' url='intro/install' host 'docs' %}">Installation guide</a></li>
-          <li><a href="{% url 'document-detail' lang='en' version='stable' url='intro/tutorial01' host 'docs' %}">Write your first Django app</a></li>
-      </ul>
-      <a href="{% url 'start' %}" class="link-readmore">Getting started with Django</a>
+  <h3>New to Django?</h3>
+  <ul class="list-links-small docs-list">
+    <li>
+      <a href="{% url 'document-detail' lang='en' version='stable' url='intro/install' host 'docs' %}">Installation
+        guide</a>
+    </li>
+    <li>
+      <a href="{% url 'document-detail' lang='en' version='stable' url='intro/tutorial01' host 'docs' %}">Write your
+        first Django app</a>
+    </li>
+  </ul>
+  <a href="{% url 'start' %}" class="link-readmore">Getting started with Django</a>
 
-      <h3>The power of Django</h3>
-      <ul class="list-links-small docs-list">
-          <li><a href="{% url 'document-detail' lang='en' version='stable' url='topics/db/models' host 'docs' %}">Object-relational mapper</a></li>
-          <li><a href="{% url 'document-detail' lang='en' version='stable' url='intro/tutorial02' host 'docs' %}">Automatic admin interface</a></li>
-          <li><a href="{% url 'document-detail' lang='en' version='stable' url='topics/templates' host 'docs' %}">Robust template system</a></li>
-          <li><a href="{% url 'document-detail' lang='en' version='stable' url='topics/i18n' host 'docs' %}">Quick internationalization</a></li>
-      </ul>
-      <a href="{% url 'overview' %}" class="link-readmore">Explore more features</a>
+  <h3>The power of Django</h3>
+  <ul class="list-links-small docs-list">
+    <li>
+      <a href="{% url 'document-detail' lang='en' version='stable' url='topics/db/models' host 'docs' %}">Object-relational
+        mapper</a>
+    </li>
+    <li>
+      <a href="{% url 'document-detail' lang='en' version='stable' url='intro/tutorial02' host 'docs' %}">Automatic
+        admin interface</a>
+    </li>
+    <li>
+      <a href="{% url 'document-detail' lang='en' version='stable' url='topics/templates' host 'docs' %}">Robust
+        template system</a>
+    </li>
+    <li>
+      <a href="{% url 'document-detail' lang='en' version='stable' url='topics/i18n' host 'docs' %}">Quick
+        internationalization</a>
+    </li>
+  </ul>
+  <a href="{% url 'overview' %}" class="link-readmore">Explore more features</a>
 
-      <h3>Get involved</h3>
-      <dl class="list-links-small">
-         <dt><a href="irc://irc.freenode.net/django">#django IRC channel</a></dt>
-          <dd>
-            Chat with other Django users
-          </dd>
+  <h3>Get involved</h3>
+  <dl class="list-links-small">
+    <dt><a href="irc://irc.freenode.net/django">#django IRC channel</a></dt>
+    <dd>
+      Chat with other Django users
+    </dd>
 
-          <dt><a href="https://code.djangoproject.com/">Ticket system</a></dt>
-          <dd>
-            Report bugs and make feature requests
-          </dd>
-      </dl>
-      <a href="{% url 'community-index' %}" class="link-readmore">Inside the Django community</a>
+    <dt><a href="https://code.djangoproject.com/">Ticket system</a></dt>
+    <dd>
+      Report bugs and make feature requests
+    </dd>
+  </dl>
+  <a href="{% url 'community-index' %}" class="link-readmore">Inside the Django community</a>
 
-      <h3>The Django Software Foundation</h3>
-      <dl class="list-links-small">
-        <dt><a href="/foundation/">About the Foundation</a></dt>
-        <dd>
-          Our non-profit supports the project
-        </dd>
+  <h3>The Django Software Foundation</h3>
+  <dl class="list-links-small">
+    <dt><a href="/foundation/">About the Foundation</a></dt>
+    <dd>
+      Our non-profit supports the project
+    </dd>
 
-        <dt><a href="/foundation/donate/">Support Django</a></dt>
-        <dd>
-          Your contribution makes Django stronger
-        </dd>
+    <dt><a href="/foundation/donate/">Support Django</a></dt>
+    <dd>
+      Your contribution makes Django stronger
+    </dd>
 
-        <dt><a href="/contact/foundation/">Contact the Django Software Foundation</a></dt>
-        <dd></dd>
-      </dl>
-      <a href="/foundation/" class="link-readmore">More about the DSF</a>
-  </div>
+    <dt>
+      <a href="/contact/foundation/">Contact the Django Software Foundation</a>
+    </dt>
+    <dd></dd>
+  </dl>
+  <a href="/foundation/" class="link-readmore">More about the DSF</a>
+</div>
 
 {% endblock %}
 {% endcomment %}
 {% block alert %}
-  {% comment %}
-  <div role="alert">
-    <div class="container">
-      <dl>
-        <dt>
-          <i class="icon icon-bullhorn"></i>
-          <a href="#">Django Fundraising Drive 2014</a>
-        </dt>
-        <dd>
-          The quickest &amp; most fun way to support Django.
-          <a href="#" class="link-readmore">Learn more</a>
-        </dd>
-      </dl>
-    </div>
+{% comment %}
+<div role="alert">
+  <div class="container">
+    <dl>
+      <dt>
+        <i class="icon icon-bullhorn"></i>
+        <a href="#">Django Fundraising Drive 2014</a>
+      </dt>
+      <dd>
+        The quickest &amp; most fun way to support Django.
+        <a href="#" class="link-readmore">Learn more</a>
+      </dd>
+    </dl>
   </div>
-  {% endcomment %}
+</div>
+{% endcomment %}
 {% endblock %}
+</div>
