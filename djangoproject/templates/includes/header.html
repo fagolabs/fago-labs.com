@@ -21,8 +21,8 @@
           <li{% if 'weblog' in request.path %} class="active"{% endif %}>
             <a href="{% url 'weblog:index' %}">Blog</a>
           </li>
-          <li{% if 'start' in request.path %} class="active"{% endif %} >
-            <a href="{% url 'overview' %}">About</a>
+          <li{% if 'about' in request.path %} class="active"{% endif %} >
+            <a href="{% url 'about:about' %}">About</a>
           </li>
         </div>
         <div style="float: right;">
