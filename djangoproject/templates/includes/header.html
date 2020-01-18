@@ -4,10 +4,10 @@
     <a class="logo" href="{% url 'homepage' %}">BrandName</a>
     <!-- .logo in style -->
     <div role="navigation">
-      <ul>
-        <div style="float: left !important;">
-          <li{% if 'start' in request.path %} class="active"{% endif %} >
-            <a href="{% url 'overview' %}">Research</a>
+      <ul style="width: 100%;">
+        <div>
+          <li{% if 'research' in request.path %} class="active"{% endif %} >
+            <a href="{% url 'research:optimized-technique' %}">Research</a>
           </li>
           <li{% if 'start' in request.path %} class="active"{% endif %} >
             <a href="{% url 'overview' %}">Solutions</a>
@@ -24,28 +24,26 @@
           <li{% if 'start' in request.path %} class="active"{% endif %} >
             <a href="{% url 'overview' %}">About</a>
           </li>
+          <div style="float: right !important;" class="login-reg">
+            <li>
+              <a href="{% url 'login' %}">Login</a>
+            </li>
+            <li>
+              <a href="{% url 'homepage' %}">Sign up</a>
+            </li>
+            <!-- <li>
+              <a >
+                <img style="width: 30px; height: 24px;"
+                src="{% static "img/logos/globe-asia-solid.svg"%}">
+                <span
+                style="color: #fff;
+              display: inline-block;"
+                >EN</span>
+              </a>
+            </li>  -->
+          </div>
         </div>
-        <div style="float: right;">
-          <!-- <li{% if 'foundation' in request.path %} class="active"{% endif %}>
-            <a href="{% url 'homepage' %}foundation/">About</a>
-          </li> -->
-          <li>
-            <a href="{% url 'login' %}">Login</a>
-          </li>
-          <li>
-            <a href="{% url 'homepage' %}">Sign up</a>
-          </li>
-          <!-- <li>
-            <a >
-              <img style="width: 30px; height: 24px;"
-              src="{% static "img/logos/globe-asia-solid.svg"%}">
-              <span
-              style="color: #fff;
-            display: inline-block;"
-              >EN</span>
-            </a>
-          </li>  -->
-        </div>
+        
       </ul>
     </div>
   </div>

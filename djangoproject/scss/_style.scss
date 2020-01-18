@@ -482,7 +482,15 @@ blockquote {
       margin-left: 0;
     }
   }
-
+  .login-reg {
+    // @include respond-min(768px) {
+    //   float: left;
+    // }
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      float: left;
+    }
+  }
   .menu-button {
     @include font-size(20);
     background: $top-color;
@@ -844,7 +852,7 @@ blockquote {
   @include clearfix;
   @include sans-serif;
   position: relative;
-  background: #333333;
+  background: $footer-color;
   clear: both;
   margin-top: 0px;
 
@@ -855,7 +863,29 @@ blockquote {
   .subfooter {
     @include clearfix;
     padding: 0 10px;
-
+    .icon {
+      display: block;
+      .icon-gmail {
+        width: 40px !important;
+      }
+      .icon-size {
+        padding: 5px 0 10px;
+        margin: 0 15px 3rem 0;
+        width: 32px;
+        transition: all 0.3s linear;
+      }
+      .icon-size:hover {
+        transform: translateY(-4px);
+      }
+    }
+    .icon {
+      a {
+        text-decoration: none;
+      }
+      a:visited {
+        color: $footer-color;
+      }
+    }
     @include respond-min(768px) {
       padding: 0;
     }
@@ -863,9 +893,12 @@ blockquote {
       @include font-size(15);
       color: white;
     }
-    .row {
-      margin-bottom: 3.5rem;
+    .list-content {
+      .row {
+        margin-bottom: 3.5rem;
+      }
     }
+
     .col {
       &:first-child {
         h2 {
@@ -3278,19 +3311,19 @@ ul.corporate-members li {
     }
   }
 }
-
+.center {
+  margin: 0 auto;
+  text-align: center;
+}
 //homepage
 .homepage {
-  .center {
-    margin: 0 auto;
-    text-align: center;
-  }
   .product-def {
     background-color: $top-color;
+    width: 91.66667%;
   }
   .section {
     .container {
-      max-width: 90%;
+      width: 91.66667%;
       margin: 0 auto;
     }
   }
@@ -3298,11 +3331,11 @@ ul.corporate-members li {
   #special1 {
     max-width: 33%;
     text-align: center;
-    border: 1px solid #fff;
-    border-radius: 100px;
+    border: 2px solid #fff;
+    border-radius: 10px;
     text-decoration: none;
     font-weight: bold;
-    padding: 16px 3.5rem;
+    padding: 16px 3rem;
     color: #156741;
   }
   #special {
@@ -3318,7 +3351,7 @@ ul.corporate-members li {
   }
   .center {
     margin: 0 auto;
-    padding: 0 4.16667%;
+    // padding: 0 4.16667%;
   }
   .content {
     .parent:hover .child {
@@ -3453,11 +3486,14 @@ ul.corporate-members li {
         min-width: 11rem;
       }
       .test-text {
+        // @include respond-min(710) {
+        //   margin-top: 10px;
+        // }
         @include font-size(14);
         width: 100%;
         margin: 0 auto;
         position: absolute;
-        top: 10.5rem;
+        top: 12rem;
         padding: 0 0.5rem;
         z-index: 10;
         transition: all 0.32s linear;
@@ -3477,7 +3513,7 @@ ul.corporate-members li {
     }
   }
   .carousel-news {
-    max-width: 910px;
+    width: 91.66667%;
     margin: 0 auto;
     .col-12,
     .col-md-12 {
@@ -3558,6 +3594,42 @@ ul.corporate-members li {
       .active {
         background: #4a00d8 !important;
       }
+    }
+  }
+}
+.research {
+  .icon-nav {
+    height: 13.5vh;
+    margin-top: 2rem;
+  }
+  .research-nav {
+    a {
+      text-decoration: none;
+      transition: all 0.25s linear;
+      h4 {
+        color: black;
+      }
+    }
+    a:hover {
+      background-color: #124191!important;
+      .icon-nav {
+        filter: brightness(0) invert(1);
+      }
+      h4 {
+        color: white;
+      }
+    }
+    #active {
+      background-color: #007bff;
+      .icon-nav {
+        filter: brightness(0) invert(1);
+      }
+      h4 {
+        color: white;
+      }
+    }
+    .col-3 {
+      border-right: 1px solid #8c8c8c;
     }
   }
 }

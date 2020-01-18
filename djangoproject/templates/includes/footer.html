@@ -1,8 +1,9 @@
+{% load static %}
 <div role="contentinfo">
   <div class="subfooter">
     <div class="container">
       <div class="row">
-        <div class="col-7">
+        <div class="col-12 col-md-7 list-content">
           <div class="row">
             <div class="col-12 col-md-12 col-lg-4">
               <h2>Solutions For</h2>
@@ -29,16 +30,35 @@
           </div>
         </div>
 
-        <div class="col-5 follow last-child">
-          <h2>Our Mission</h2>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially.
-          </p>
+        <div class="col-12 col-md-5 follow last-child">
+          <div >
+            <h2>Our Mission</h2>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into
+              electronic typesetting, remaining essentially.
+            </p>
+          </div>
+          <div >
+            <h2 style="width: 100%; margin-bottom: 5px;">Follow Us</h2>
+            <div class="icon">
+              <a href="https://www.fb.com" target="_blank">
+                <img class="icon-fb icon-size" src="{% static "img/logos/facebook.svg" %}"/>
+              </a>
+              <a href="https://mail.google.com/" target="_blank">
+                <img class="icon-gmail icon-size" src="{% static "img/logos/gmail.svg" %}"/>
+              </a>
+              <a href="https://www.github.com" target="_blank">
+                <img class="icon-fb icon-size" src="{% static "img/logos/github.svg" %}"/>
+              </a>
+              <a href="https://www.github.com" target="_blank">
+                <img class="icon-fb icon-size" src="{% static "img/logos/linkedin.svg" %}"/>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>

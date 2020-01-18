@@ -31,6 +31,7 @@ urlpatterns = [
     # to work around a permanent redirect stored in the db that existed before the redesign:
     path('overview/', RedirectView.as_view(url='/start/overview/', permanent=False)),
     path('accounts/', include('accounts.urls')),
+    path('research/',TemplateView.as_view(template_name='base_research.html'),name='research'),
 
     # Admin password reset
     path('admin/password_reset/', auth_views.PasswordResetView.as_view(), name='admin_password_reset'),
@@ -55,7 +56,6 @@ urlpatterns = [
     path('foundation/',TemplateView.as_view(template_name='base_foundation.html'),name='foundation'),
     path('foundation/', include('members.urls')),
     path('fundraising/', include('fundraising.urls')),
-
     # Used by docs search suggestions
     re_path(r'^r/(?P<content_type_id>\d+)/(?P<object_id>.*)/$', contenttypes_views.shortcut, name='contenttypes-shortcut'),
 
@@ -82,6 +82,8 @@ urlpatterns = [
     path('download/', include('releases.urls')),
     path('svntogit/', include('svntogit.urls')),
     path('', include('legacy.urls')),
+    #research
+    path('research/',include('research.urls'))
 ]
 
 if settings.DEBUG:

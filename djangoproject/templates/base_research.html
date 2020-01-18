@@ -1,0 +1,46 @@
+{% extends "base_2col.html" %}
+{% load static %}
+{% block sectionid %}
+research
+{% endblock sectionid %}
+{% block body_class %}research{% endblock %}
+{% block layout_class %}full-width{% endblock %}
+{% block header %}
+<div class=" pt-5 pb-4">
+    <h1 class="bold mb-3">
+        Research
+    </h1>
+</div>
+{% endblock %}
+{% block billboard %}
+<div class="container research mt-5 mb-5">
+    <div class="row center research-nav" style="max-width: 678px;">
+        <a href="{% url 'research:optimized-technique'%}" class="col-3" {% if 'optimized-technique' in request.path %}
+            id="active" {% endif %}>
+            <div>
+                <img class="icon-nav" src="{% static "img/logos/optimization.svg" %}" />
+                <h4>Optimized Technique</h4>
+            </div>
+        </a>
+        <a href="{% url 'research:dpi'%}" class="col-3" {% if 'dpi' in request.path %} id="active" {% endif %}>
+            <div>
+                <img class="icon-nav" src="{% static "img/logos/seo-guide.svg" %}" />
+                <h4>DPI - Deep Packet Inspection</h4>
+            </div>
+        </a>
+        <a href="{% url 'research:cns'%}" class="col-3" {% if 'cns' in request.path %} id="active" {% endif %}>
+            <div>
+                <img class="icon-nav" src="{% static "img/logos/system.svg" %}" />
+                <h4>Cloud & Network & Storage</h4>
+            </div>
+        </a>
+        <a href="{% url 'research:security'%}" class="col-3" {% if 'security' in request.path %} id="active"
+            {% endif %}>
+            <div>
+                <img class="icon-nav" src="{% static "img/logos/password.svg" %}" />
+                <h4>Security</h4>
+            </div>
+        </a>
+    </div>
+</div>
+{% endblock  %}
