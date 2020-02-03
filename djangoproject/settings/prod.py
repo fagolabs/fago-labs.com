@@ -5,6 +5,7 @@ ALLOWED_HOSTS = [
     'djangoproject.com',
     'docs.djangoproject.com',
     'dashboard.djangoproject.com',
+    '125.212.204.218'
 ] + SECRETS.get('allowed_hosts', [])
 
 LOCALE_MIDDLEWARE_EXCLUDED_HOSTS = ['docs.djangoproject.com']

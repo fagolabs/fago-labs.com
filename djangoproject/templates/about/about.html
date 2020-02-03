@@ -4,67 +4,84 @@
 {% block body_class %}about{% endblock %}
 {% block layout_class %}full-width{% endblock %}
 
-{% block header %}
+{% block background %}
 <div class="bg-about">
 </div>
 {% endblock %}
 
 {% block content %}
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-                <h2>
-                    Revered experience and unlimited ambition
-                </h2>
-            </div>
-            <div class="col-12 col-sm-9 col-md-9 col-lg-9 col-xl-9">
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+            <h2>
+                Revered experience and unlimited ambition
+            </h2>
+        </div>
+        <div class="col-12 col-sm-9 col-md-9 col-lg-9 col-xl-9">
             <p style="text-align: justify;">
-                Located in Silicon Valley, PARC is a renowned scientific research and Open Innovation company that’s been at the heart of some of the most important technological breakthroughs of our time. We bring leading scientists, engineers and designers together to form teams across a series of Focus Areas that we believe are the future of technology, science and innovation.
+                Located in Silicon Valley, PARC is a renowned scientific research and Open Innovation company that’s
+                been at the heart of some of the most important technological breakthroughs of our time. We bring
+                leading scientists, engineers and designers together to form teams across a series of Focus Areas that
+                we believe are the future of technology, science and innovation.
                 <br><br>
-                Creativity and science are core to PARC’s mission to reduce the time and risk attached to innovation. We draw on our revered history and our energy for the future to create technologies that improve our world and solve complex challenges.
+                Creativity and science are core to PARC’s mission to reduce the time and risk attached to innovation. We
+                draw on our revered history and our energy for the future to create technologies that improve our world
+                and solve complex challenges.
                 <br><br>
-                Above all, working with PARC means benefiting from something unique. Because every technological challenge is different, the team you work with will assemble and grow organically, based on your innovation goals. This approach to combining expertise and capabilities has led to some of our most exciting R&D, technology and IP projects with startups, government agencies and Fortune 500 partners.
+                Above all, working with PARC means benefiting from something unique. Because every technological
+                challenge is different, the team you work with will assemble and grow organically, based on your
+                innovation goals. This approach to combining expertise and capabilities has led to some of our most
+                exciting R&D, technology and IP projects with startups, government agencies and Fortune 500 partners.
                 <br></p>
-            </div>
         </div>
-        
-        <div class="row">
-            <h2>Focus Area</h2>
-            <p style="text-align: justify;">
-            At PARC, we concentrate our thinking on a series of Focus Areas that we believe are the future of technology. From AI to digital design and manufacturing, novel printing to microsystems, IoT to the workplace, our Focus Areas sit at the center of our innovation. In turn, each individual Focus Area is enabled by a set of core Competencies where our collective expertise and capabilities come to life.
-            </p>
-        </div>
+    </div>
 
-        <div class="row">
-            <div class="col-0 col-sm-0 col-md-1 col-lg-1 col-xl-1"></div>
-            <div class="col-12 col-sm-5 col-md-4 col-lg-4 col-xl-4">
-                <h2>
-                    <b>Fago Labs History</b>
-                </h2>
-                <p style="text-align: justify;">
-                    PARC was founded in 1970 as Xerox PARC. In 2002, PARC was incorporated, creating a wholly owned, independent subsidiary of Xerox Corporation. Since its inception, PARC has created $1 trillion in new industries, $60 billion in startups and spin-offs, and almost 6,000 patents and patent applications.
-                </p>
-                <div class="text-center">
+    <div class="row">
+        <h2>Focus Area</h2>
+        <p style="text-align: justify;">
+            At PARC, we concentrate our thinking on a series of Focus Areas that we believe are the future of
+            technology. From AI to digital design and manufacturing, novel printing to microsystems, IoT to the
+            workplace, our Focus Areas sit at the center of our innovation. In turn, each individual Focus Area is
+            enabled by a set of core Competencies where our collective expertise and capabilities come to life.
+        </p>
+    </div>
+
+    <div class="row">
+        <div class="col-0 col-sm-0 col-md-1 col-lg-1 col-xl-1"></div>
+        <div class="col-12 col-sm-5 col-md-4 col-lg-4 col-xl-4 pb-5 pl-0 pr-0">
+            <h2>
+                <b>Fago Labs History</b>
+            </h2>
+            <p class="description" style="text-align: justify;">
+                PARC was founded in 1970 as Xerox PARC. In 2002, PARC was incorporated, creating a wholly owned,
+                independent subsidiary of Xerox Corporation. Since its inception, PARC has created $1 trillion in new
+                industries, $60 billion in startups and spin-offs, and almost 6,000 patents and patent applications.
+            </p>
+            <div class="bottom-btn">
                 <a href="{% url 'about:history' %}" class="btn btn-primary btn-lg" role="button">
                     FIND OUT MORE
                 </a>
-                </div>
             </div>
-            <div class="col-0 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
-            <div class="col-12 col-sm-5 col-md-4 col-lg-4 col-xl-4">
-                <h2>
-                    <b>Fago Labs People</b>
-                </h2>
-                <p style="text-align: justify;">
-                    Our people are integral to how we help organizations respond to a rapidly changing technology landscape. With over 150 scientists, engineers and designers, we are able to create new teams for every project we work on, combining creative thinkers and innovators from a variety of backgrounds.
-                </p>
-                <div class="text-center">
-                <a href="{% url 'about:team' %}" class="btn btn-primary btn-lg" role="button">
-                    MEET THE TEAM
-                </a>
-                </div>
-            </div>
-            <div class="col-0 col-sm-0 col-md-1 col-lg-1 col-xl-1"></div>
         </div>
+        <div class="col-0 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
+        <div class="col-12 col-sm-5 col-md-4 col-lg-4 col-xl-4 pb-5 pl-0 pr-0">
+            <h2>
+                <b>Fago Labs People</b>
+            </h2>
+            <p class="description" style="text-align: justify;">
+                Our people are integral to how we help organizations respond to a rapidly changing technology landscape.
+                With over 150 scientists, engineers and designers, we are able to create new teams for every project we
+                work on, combining creative thinkers and innovators from a variety of backgrounds.
+            </p>
+            <p style="text-align: center;">
+                <div class="bottom-btn">
+                    <a href="{% url 'about:team' %}" class="btn btn-primary btn-lg" role="button">
+                        MEET THE TEAM
+                    </a>
+                </div>
+            </p>
+        </div>
+        <div class="col-0 col-sm-0 col-md-1 col-lg-1 col-xl-1"></div>
     </div>
+</div>
 {% endblock %}
