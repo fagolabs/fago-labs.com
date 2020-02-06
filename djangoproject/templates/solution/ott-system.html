@@ -1,0 +1,79 @@
+{% extends "base_solution.html" %}
+{% load static %}
+
+{% block solution-info %}
+<div class="financeBox" data-aos="fade-up">
+    <h1>Secured OTT System
+    </h1>
+    <p class="sub">Streaming Website Solution</p>
+    <p data-aos="fade-up">“Over-the-top” is the sexiest term in entertainment right now, not the least of which because it sits at the
+        center of the inevitable and unstoppable merger between the worlds of television and digital video. But what,
+        exactly, does it mean and why the hell does it matter?
+    </p>
+    <div class="row" data-aos="fade-up">
+        <div class="stitle">
+            Pain Point
+        </div>
+        <div class="line-color"></div>
+    </div>
+    <ul>
+
+        {% comment %} {% for o in pain-point %}
+        <li>o</li>
+        {% endfor %} {% endcomment %}
+        <li data-aos="fade-up">Server cloning</li>
+        <li data-aos="fade-up">Apps connectivity requests</li>
+        <li data-aos="fade-up">Vulnerability-free server deployment</li>
+        <li data-aos="fade-up">Server decommissioning</li>
+    </ul>
+    <div class="row" data-aos="fade-up">
+        <div class="stitle">
+            Solution Advantage
+        </div>
+        <div class="line-color "></div>
+    </div>
+    <div class="row">
+        <div class=" card-detail" data-aos="fade-up" style="margin-right: 5%;">
+            <div class="imgBox center">
+                <img class="icon " src="{% static "img/solution/safe-zone.svg" %}" />
+                <p class="center">High performance</p>
+            </div>
+            <div class="infoBox center">
+                <p>High performance</p>
+                <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those
+                    interested.
+                </p>
+            </div>
+        </div>
+        <div class=" card-detail" data-aos="fade-up">
+            <div class="imgBox center">
+                <img class="icon " src="{% static "img/solution/computer.svg" %}" />
+                <p class="center">Easy to deploy & setup
+                </p>
+            </div>
+            <div class="infoBox center">
+                <p>Easy to deploy & setup
+                </p>
+                <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those
+                    interested.
+                </p>
+            </div>
+        </div>
+        <div class=" card-detail" data-aos="fade-up" style="margin-right: 5%;">
+            <div class="imgBox center">
+                <img class="icon " src="{% static "img/solution/server.svg" %}" />
+                <p class="center">Multiple-features
+                </p>
+            </div>
+            <div class="infoBox center">
+                <p>Multiple-features
+                </p>
+                <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those
+                    interested.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock  %}

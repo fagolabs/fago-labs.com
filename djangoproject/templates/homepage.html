@@ -32,8 +32,8 @@
 
 {% block content %}
 
-<div class="section mb-5 mt-5">
-  <div class="container carousel-homepage">
+<div class="section mb-5 mt-5" data-aos="fade-up">
+  {% comment %} <div class="container carousel-homepage">
     <h1 class="center mt-5 mb-5">Lab Introduction</h1>
     <div id="carouselExampleIndicators" class="carousel slide">
       <div class="carousel-inner">
@@ -89,9 +89,75 @@
         </ol>
       </div>
     </div>
+  </div> {% endcomment %}
+  <div class="container carousel-bell">
+    <div class="row">
+      <div class="text-wrap col-12 col-md-6">
+        <div id="carouselText" class="carousel slide" data-interval="false">
+          <div class="carousel-inner">
+            <div class="carousel-item active center">
+              <h2 id="slide-title" class="white">Future Human Podcast</h2>
+              <p>Our new podcast series explores the human potential of technology through interviews with researchers
+                and artists alike</p>
+              <a class="explore mt-4">Explore</a>
+            </div>
+            <div class="carousel-item center">
+              <h2 id="slide-title" class="white">Distinguished Academic Partners Program</h2>
+              <p>Bell Labs partners with universities around the world to create the next generation of researchers</p>
+              <a class="explore mt-4">Explore</a>
+            </div>
+            <div class="carousel-item center">
+              <h2 id="slide-title" class="white">Students Who E.A.T.</h2>
+              <p>E.A.T. summer interns embark on a 10-week journey, developing their own experiments in art and
+                technology.</p>
+              <a class="explore mt-4">Explore</a>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" id="carousel-text-prev" href=".carousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" id="carousel-text-next" href=".carousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <div class="img-wrap col-12 col-md-12 col-lg-10">
+        <div id="myCarousel" class="carousel slide" data-interval="false" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item check0 active">
+              <img class="d-block w-100" src="https://media.timeout.com/images/101484105/image.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item check1">
+              <img class="d-block w-100" src="http://s1.it.atcdn.net/wp-content/uploads/2015/08/2-London.jpg"
+                alt="First slide">
+            </div>
+            <div class="carousel-item check2">
+              <img class="d-block w-100" src="https://media.timeout.com/images/101602611/image.jpg" alt="Third slide">
+            </div>
+            <div style="display:none;">
+              <a class="carousel-control-prev" id="carousel-prev" href="#myCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" id="carousel-next" href="#myCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+              {% comment %} <ol class="carousel-indicators" style="display:none">
+                <li class="swap0" data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li class="swap1" data-target="#myCarousel" data-slide-to="1"></li>
+                <li class="swap2" data-target="#myCarousel" data-slide-to="2"></li>
+              </ol> {% endcomment %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-<div class="section container content mt-5">
+<div class="section container content mt-5" data-aos="fade-up">
   <div class="row mt-5">
     <h1 class="center mt-3">Latest News</h1>
   </div>
@@ -319,17 +385,17 @@
     </div>
     <div class="view-more mb-4">
       <a href="blogs">View all news
-        <span><img class="arrow" src="{% static "img/logos/right-arrow.png" %}" /></span>
+        <span><img class="arrow" src="{% static "img/solution/download.svg" %}" /></span>
       </a>
     </div>
   </div>
 </div>
-<div class="container product content mt-5">
-  <h1 class="center">Fagolabs Product</h1>
-  <p class="center mt-3 ">
+<div class="container product content mt-5" >
+  <h1 class="center" data-aos="fade-up">Fagolabs Product</h1>
+  <p class="center mt-3 " data-aos="fade-up">
     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
   </p>
-  <div class="row mt-3">
+  <div class="row mt-3" data-aos="fade-up">
     <div class="col-sm-6 col-md-3">
       <div class="test">
         <div class="test-img">
@@ -390,7 +456,7 @@
       </div>
     </div>
   </div>
-  <div class="row mt-5">
+  <div class="row mt-5" data-aos="fade-up">
     <div class="col-sm-6 col-md-3">
       <div class="test">
         <div class="test-img">
@@ -433,7 +499,19 @@
     </div>
   </div>
 </div>
+{% comment %} <script type="text/javascript">
+  function slideCarousels(ids, action) {
+    var len = ids.length;
+    var id = null;
 
+    for (var i = 0; i < len; i++) {
+      id = ids[i];
+      $('#' + id).carousel({
+        slide: action
+      });
+    }
+  }
+</script> {% endcomment %}
 <!-- END #content-secondary -->
 {% endblock %}
 {% comment %}
@@ -539,5 +617,5 @@
   </div>
 </div>
 {% endcomment %}
+
 {% endblock %}
-</div>

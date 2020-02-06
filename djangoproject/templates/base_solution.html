@@ -1,0 +1,79 @@
+{% extends "base_3col.html" %}
+{% load static %}
+{% block sectionid %}
+research
+{% endblock sectionid %}
+{% block body_class %}solution{% endblock %}
+{% block layout_class %}full-width gray-color{% endblock %}
+{% block header %}
+<div class="pt-5 pb-4 overlay-top">
+    <h1 class="bold mb-3">
+        solution
+    </h1>
+</div>
+{% endblock %}
+{% block header-classes %}
+container--flex container--flex--wrap--mobile
+{% endblock %}
+{% comment %} {% block billboard %}
+{% endblock  %} {% endcomment %}
+{% block content %}
+{% comment %} <div class="solution"> {% endcomment %}
+    <div class="mobile-menu">
+        <div class="menu-wrap">
+            <div class="title">
+                Solution
+                {% comment %} <img class="icon" src="{% static "img/solution/download.svg" %}"></img>  {% endcomment %}
+            </div>
+            <div class="menu-item {% if 'dns-server' in request.path %} active {% endif %} " href>
+                <a href="{% url 'solution:dns-server' %}"> DNS Server Solution</a>
+            </div>
+            <div class="menu-item {% if 'web-server' in request.path %} active {% endif %}">
+                <a href="{% url 'solution:web-server' %}"> Next-Gen Web Server</a>
+            </div>
+            <div class="menu-item {% if 'ott-system' in request.path %} active {% endif %}">
+                <a href="{% url 'solution:ott-system' %}"> Secured OTT System</a>
+            </div>
+            <div class="menu-item {% if 'traffic-recognizer' in request.path %} active {% endif %}">
+                <a href="{% url 'solution:traffic-recognizer' %}"> Traffic Recognizer</a>
+            </div>
+            <div class="menu-item {% if 'ids-ips' in request.path %} active {% endif %}">
+                <a href="{% url 'solution:ids-ips' %}"> IDS/IPS</a>
+            </div>
+            <div class="menu-item {% if 'virtual-firewall' in request.path %} active {% endif %}">
+                <a href="{% url 'solution:virtual-firewall' %}"> Virtual Firewall</a>
+            </div>
+        </div>
+    </div>
+    <div class="side-left" data-aos="fade-up">
+        <div class="title">
+            Solution
+        </div>
+        <div class="menu-item {% if 'dns-server' in request.path %} active {% endif %} " href>
+            <a href="{% url 'solution:dns-server' %}"> DNS Server Solution</a>
+        </div>
+        <div class="menu-item {% if 'web-server' in request.path %} active {% endif %}">
+            <a href="{% url 'solution:web-server' %}"> Next-Gen Web Server</a>
+        </div>
+        <div class="menu-item {% if 'ott-system' in request.path %} active {% endif %}">
+            <a href="{% url 'solution:ott-system' %}"> Secured OTT System</a>
+        </div>
+        <div class="menu-item {% if 'traffic-recognizer' in request.path %} active {% endif %}">
+            <a href="{% url 'solution:traffic-recognizer' %}"> Traffic Recognizer</a>
+        </div>
+        <div class="menu-item {% if 'ids-ips' in request.path %} active {% endif %}">
+            <a href="{% url 'solution:ids-ips' %}"> IDS/IPS</a>
+        </div>
+        <div class="menu-item {% if 'virtual-firewall' in request.path %} active {% endif %}">
+            <a href="{% url 'solution:virtual-firewall' %}"> Virtual Firewall</a>
+        </div>
+    </div>
+    <div class="content-info gray-color">
+        {% block solution-info %}
+
+        {% endblock  %}
+    </div>
+    {% comment %}
+</div> {% endcomment %}
+
+{% endblock  %}

@@ -8,5 +8,6 @@ urlpatterns=[
     path('optimized-technique',TemplateView.as_view(template_name='research/optimized-technique.html'),name="optimized-technique"),
     path('dpi',TemplateView.as_view(template_name='research/dpi.html'),name="dpi"),
     path('cns',TemplateView.as_view(template_name='research/cns.html'),name="cns"),
-    path('security',TemplateView.as_view(template_name='research/security.html'),name="security")
+    path('security',TemplateView.as_view(template_name='research/security.html'),name="security"),
+    path('data-science',TemplateView.as_view(template_name='research/data-science.html'),name="data-science")
 ]

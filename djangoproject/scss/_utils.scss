@@ -21,7 +21,7 @@ $red-light: #ffbaba;
 $red-dark: #6a0e0e;
 $nav-color: #0486ff;
 $font-path: "../fonts/fira-mono";
-
+$solution-color: #34c8e6;
 // @font-face declarations
 
 @font-face {
@@ -50,7 +50,11 @@ $font-path: "../fonts/fira-mono";
     @content;
   }
 }
-
+@mixin respond-max($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
 @mixin device-min($width) {
   @media screen and (min-device-width: $width) {
     @content;
@@ -151,4 +155,80 @@ html {
   padding: 20px;
   border: 1px solid $gray-line;
   border-radius: 4px;
+}
+@mixin multiLineEllipsis($lineHeight: 1.2em, $lineCount: 1, $bgColor: white) {
+  overflow: hidden;
+  position: relative;
+  line-height: $lineHeight;
+  max-height: $lineHeight * $lineCount;
+  text-align: justify;
+  margin-right: -1em;
+  padding-right: 1em;
+  &:before {
+    content: "...";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 1em;
+    height: 1em;
+    margin-top: 0.2em;
+    background: $bgColor;
+  }
+}
+@mixin transitionBounce($color) {
+  a {
+    text-decoration: none;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: $color;
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transform-origin: 0 50%;
+      transform-origin: 0 50%;
+      -webkit-transition-property: transform;
+      transition-property: transform;
+      -webkit-transition: 400ms ease-out;
+      transition: 400ms ease-out;
+    }
+    &:hover:before {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+      -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+      transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    }
+    h4 {
+      color: black;
+      transition: all 300ms ease-out;
+    }
+  }
+  a:hover {
+    color: white;
+    -webkit-transition: color 350ms;
+    transition: color 350ms;
+    .icon-nav {
+      filter: brightness(0) invert(1);
+    }
+    h4 {
+      color: white;
+      -webkit-transition: color 300ms;
+      transition: color 300ms;
+    }
+  }
+  @content;
+}
+@mixin fillLeft($width) {
+  width: calc(100% - $width);
 }

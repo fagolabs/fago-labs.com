@@ -6,32 +6,72 @@
     <div role="navigation">
       <ul style="width: 100%;">
         <div>
-          <li{% if 'research' in request.path %} class="active"{% endif %} >
-            <a href="{% url 'research:optimized-technique' %}">Research</a>
+          <li id="dropdown" {% if 'research' in request.path %} class="active" {% endif %}>
+            <a class="link dropdown-icon" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              <div class="title">
+                Research
+              </div>
+              <div class="dropdown-menu-mobile">
+                <a class="dropdown-item" href="{% url 'research:optimized-technique' %}">Optimized techniques</a>
+                <a class="dropdown-item" href="{% url 'research:dpi' %}">DPI - Deep Packet Inspection</a>
+                <a class="dropdown-item" href="{% url 'research:cns' %}">Cloud & Network & Storage</a>
+                <a class="dropdown-item" href="{% url 'research:security' %}">Security</a>
+                <a class="dropdown-item" href="{% url 'research:data-science' %}">Data Science</a>
+              </div>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="{% url 'research:optimized-technique' %}">Optimized techniques</a>
+              <a class="dropdown-item" href="{% url 'research:dpi' %}">DPI - Deep Packet Inspection</a>
+              <a class="dropdown-item" href="{% url 'research:cns' %}">Cloud & Network & Storage</a>
+              <a class="dropdown-item" href="{% url 'research:security' %}">Security</a>
+              <a class="dropdown-item" href="{% url 'research:data-science' %}">Data Science</a>
+            </div>
           </li>
-          <li{% if 'start' in request.path %} class="active"{% endif %} >
-            <a href="{% url 'overview' %}">Solutions</a>
+          <li id="dropdown" class="check1 {% if 'solution' in request.path %} active {% endif %}">
+            <a class="link dropdown-icon" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              <div class="title">
+                Solution
+              </div>
+              <div class="dropdown-menu-mobile">
+                <a class="dropdown-item" href="{% url 'solution:dns-server' %}">DNS Server Solution</a>
+                <a class="dropdown-item" href="{% url 'solution:web-server' %}">Next-Gen Web Server</a>
+                <a class="dropdown-item" href="{% url 'solution:ott-system' %}">Secured OTT System</a>
+                <a class="dropdown-item" href="{% url 'solution:traffic-recognizer' %}">Traffic Recognizer</a>
+                <a class="dropdown-item" href="{% url 'solution:ids-ips' %}">IDS/IPS</a>
+                <a class="dropdown-item" href="{% url 'solution:virtual-firewall' %}">Virtual Firewall</a>
+              </div>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="{% url 'solution:dns-server' %}">DNS Server Solution</a>
+              <a class="dropdown-item" href="{% url 'solution:web-server' %}">Next-Gen Web Server</a>
+              <a class="dropdown-item" href="{% url 'solution:ott-system' %}">Secured OTT System</a>
+              <a class="dropdown-item" href="{% url 'solution:traffic-recognizer' %}">Traffic Recognizer</a>
+              <a class="dropdown-item" href="{% url 'solution:ids-ips' %}">IDS/IPS</a>
+              <a class="dropdown-item" href="{% url 'solution:virtual-firewall' %}">Virtual Firewall</a>
+            </div>
           </li>
-          <li{% if 'download' in request.path %} class="active"{% endif %}>
-            <a href="{% url 'download' %}">Services</a>
-          </li>
-          <li{% if request.host.name == 'docs' %} class="active"{% endif %}>
-            <a href="{% url 'homepage' host 'docs' %}">News</a>
-          </li>
-          <li{% if 'weblog' in request.path %} class="active"{% endif %}>
-            <a href="{% url 'weblog:index' %}">Blog</a>
-          </li>
-          <li{% if 'start' in request.path %} class="active"{% endif %} >
-            <a href="{% url 'overview' %}">About</a>
-          </li>
-          <div style="float: right !important;" class="login-reg">
-            <li>
-              <a href="{% url 'login' %}">Login</a>
+          <li{% if 'download' in request.path %} class="active" {% endif %}>
+            <a class="link" href="{% url 'download' %}">Services</a>
             </li>
-            <li>
-              <a href="{% url 'homepage' %}">Sign up</a>
-            </li>
-            <!-- <li>
+            <li{% if request.host.name == 'docs' %} class="active" {% endif %}>
+              <a class="link" href="{% url 'homepage' host 'docs' %}">News</a>
+              </li>
+              <li{% if 'weblog' in request.path %} class="active" {% endif %}>
+                <a class="link" href="{% url 'weblog:index' %}">Blog</a>
+                </li>
+                <li{% if 'start' in request.path %} class="active" {% endif %}>
+                  <a class="link" href="{% url 'overview' %}">About</a>
+                  </li>
+                  <div style="float: right !important;" class="login-reg">
+                    <li>
+                      <a class="link" href="{% url 'login' %}">Login</a>
+                    </li>
+                    <li>
+                      <a class="link" href="{% url 'homepage' %}">Sign up</a>
+                    </li>
+                    <!-- <li>
               <a >
                 <img style="width: 30px; height: 24px;"
                 src="{% static "img/logos/globe-asia-solid.svg"%}">
@@ -41,9 +81,9 @@
                 >EN</span>
               </a>
             </li>  -->
-          </div>
+                  </div>
         </div>
-        
+
       </ul>
     </div>
   </div>

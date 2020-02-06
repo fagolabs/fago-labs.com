@@ -1,0 +1,81 @@
+{% extends "base_solution.html" %}
+{% load static %}
+
+
+{% block solution-info %}
+<div class="financeBox" data-aos="fade-up">
+    <h1>Next-Gen Web Server
+    </h1>
+    <p class="sub">Website and Deployment Solution</p>
+    <p data-aos="fade-up">The Domain Name System (DNS) is the phonebook of the Internet. When users type domain names such as
+        ‘google.com’ or ‘nytimes.com’ into web browsers, DNS is responsible for finding the correct IP address
+        for those sites. Browsers then use those addresses to communicate with origin servers or CDN edge
+        servers to access website information. This all happens thanks to DNS servers: machines dedicated to
+        answering DNS queries.</p>
+    <div class="row" data-aos="fade-up">
+        <div class="stitle ">
+            Pain Point
+        </div>
+        <div class="line-color "></div>
+    </div>
+    <ul>
+
+        {% comment %} {% for o in pain-point %}
+        <li>o</li>
+        {% endfor %} {% endcomment %}
+        <li data-aos="fade-up">Server cloning</li>
+        <li data-aos="fade-up">Apps connectivity requests</li>
+        <li data-aos="fade-up">Vulnerability-free server deployment</li>
+        <li data-aos="fade-up">Server decommissioning</li>
+    </ul>
+    <div class="row" data-aos="fade-up">
+        <div class="stitle">
+            Solution Advantage
+        </div>
+        <div class="line-color"></div>
+    </div>
+    <div class="row">
+        <div class=" card-detail" data-aos="fade-up" style="margin-right: 5%;">
+            <div class="imgBox center">
+                <img class="icon " src="{% static "img/solution/speed.svg" %}" />
+                <p class="center">High performance</p>
+            </div>
+            <div class="infoBox center">
+                <p>High performance</p>
+                <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those
+                    interested.
+                </p>
+            </div>
+        </div>
+        <div class=" card-detail" data-aos="fade-up">
+            <div class="imgBox center">
+                <img class="icon " src="{% static "img/solution/settings.svg" %}" />
+                <p class="center">Easy to deploy & setup
+                </p>
+            </div>
+            <div class="infoBox center">
+                <p>Easy to deploy & setup
+                </p>
+                <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those
+                    interested.
+                </p>
+            </div>
+        </div>
+        <div class=" card-detail" data-aos="fade-up" style="margin-right: 5%;">
+            <div class="imgBox center">
+                <img class="icon " src="{% static "img/solution/server.svg" %}" />
+                <p class="center">Multiple-features
+                </p>
+            </div>
+            <div class="infoBox center">
+                <p>Multiple-features
+                </p>
+                <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those
+                    interested.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock  %}

@@ -83,7 +83,9 @@ urlpatterns = [
     path('svntogit/', include('svntogit.urls')),
     path('', include('legacy.urls')),
     #research
-    path('research/',include('research.urls'))
+    path('research/',include('research.urls')),
+    # path('solution/',TemplateView.as_view(template_name='base_solution.html'),name='solution'),
+    path('solution/',include('solution.urls')),
 ]
 
 if settings.DEBUG:

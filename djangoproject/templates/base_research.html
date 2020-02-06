@@ -6,7 +6,7 @@ research
 {% block body_class %}research{% endblock %}
 {% block layout_class %}full-width{% endblock %}
 {% block header %}
-<div class=" pt-5 pb-4">
+<div class="pt-5 pb-4 overlay-top">
     <h1 class="bold mb-3">
         Research
     </h1>
@@ -15,30 +15,37 @@ research
 {% block billboard %}
 <div class="container research mt-5 mb-5">
     <div class="row center research-nav" style="max-width: 678px;">
-        <a href="{% url 'research:optimized-technique'%}" class="col-3" {% if 'optimized-technique' in request.path %}
+        <a href="{% url 'research:optimized-technique'%}" class="col-4" {% if 'optimized-technique' in request.path %}
             id="active" {% endif %}>
             <div>
                 <img class="icon-nav" src="{% static "img/logos/optimization.svg" %}" />
                 <h4>Optimized Technique</h4>
             </div>
         </a>
-        <a href="{% url 'research:dpi'%}" class="col-3" {% if 'dpi' in request.path %} id="active" {% endif %}>
+        <a href="{% url 'research:dpi'%}" class="col-4" {% if 'dpi' in request.path %} id="active" {% endif %}>
             <div>
                 <img class="icon-nav" src="{% static "img/logos/seo-guide.svg" %}" />
                 <h4>DPI - Deep Packet Inspection</h4>
             </div>
         </a>
-        <a href="{% url 'research:cns'%}" class="col-3" {% if 'cns' in request.path %} id="active" {% endif %}>
+        <a href="{% url 'research:cns'%}" class="col-4" {% if 'cns' in request.path %} id="active" {% endif %}>
             <div>
                 <img class="icon-nav" src="{% static "img/logos/system.svg" %}" />
                 <h4>Cloud & Network & Storage</h4>
             </div>
         </a>
-        <a href="{% url 'research:security'%}" class="col-3" {% if 'security' in request.path %} id="active"
+        <a href="{% url 'research:security'%}" class="col-4" {% if 'security' in request.path %} id="active"
             {% endif %}>
             <div>
                 <img class="icon-nav" src="{% static "img/logos/password.svg" %}" />
                 <h4>Security</h4>
+            </div>
+        </a>
+        <a href="{% url 'research:data-science'%}" class="col-4" {% if 'data-science' in request.path %} id="active"
+            {% endif %}>
+            <div>
+                <img class="icon-nav" src="{% static "img/logos/brain.svg" %}" />
+                <h4>Data Science</h4>
             </div>
         </a>
     </div>

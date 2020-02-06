@@ -17,21 +17,29 @@
   <link rel="apple-touch-icon" href="{% static "img/icon-touch.png" %}">
   <link rel="icon" sizes="192x192" href="{% static "img/icon-touch.png" %}">
   <link rel="shortcut icon" href="{% static "img/favicon.ico" %}">
+  {% comment %}
+  <link rel="stylesheet" href="animate.min.css"> {% endcomment %}
   <meta name="msapplication-TileColor" content="#113228">
   <meta name="msapplication-TileImage" content="{% static "img/icon-tile.png" %}">
+  {% comment %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  {% endcomment %}
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  {% comment %} aos animate {% endcomment %}
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
   <title>{% block title %}The Web framework for perfectionists with deadlines{% endblock %} | Django</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
     integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
   </script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
   </script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
   <link rel="stylesheet" href="{% static "css/output.css" %}">
   <script src="{% static "js/lib/webfontloader/webfontloader.js" %}"></script>
   <script>
@@ -52,10 +60,9 @@
 </head>
 
 <body id="{% block sectionid %}generic{% endblock %}" class="{% block body_class %}{% endblock %}">
-
   {% include "includes/header.html" %}
 
-  <div class="copy-banner" style="margin-top: 7rem;">
+  <div class="copy-banner" style="padding-top: 7rem;">
     <div class="container {% block header-classes %}{% endblock %}">
       {% block header %}{% endblock %}
     </div>
@@ -99,6 +106,11 @@
   {% endblock %}
 
   {# Require JS #}
+  <script>
+    AOS.init({
+      duration: 1000
+    });
+  </script>
   <script>
     function extless(input) {
       return input.replace(/(.*)\.[^.]+$/, '$1');
