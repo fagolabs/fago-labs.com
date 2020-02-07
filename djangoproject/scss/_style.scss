@@ -642,7 +642,7 @@ blockquote {
   }
 
   [role="navigation"] {
-    background: $top-color;
+    background: inherit;
 
     width: 100%;
 
@@ -821,7 +821,7 @@ blockquote {
 
   .homepage & {
     padding: 0;
-    margin: 0 0 10px 0;
+    margin: 0 0 0 0;
     background: $top-color;
     text-align: center;
     border-bottom: 1px solid $gray-line;
@@ -3418,6 +3418,44 @@ ul.corporate-members li {
 }
 //homepage
 .homepage {
+  .nav-small {
+    width: 91.66667%;
+    margin: 0 auto;
+    a {
+      text-decoration: none;
+      -webkit-transition: background-color 0.2s ease-out;
+      -moz-transition: background-color 0.2s ease-out;
+      -o-transition: background-color 0.2s ease-out;
+      -ms-transition: background-color 0.2s ease-out;
+      transition: background-color 0.2s ease-out;
+      cursor: pointer;
+      .row {
+        margin: 0 2.5rem;
+        .col-3,
+        .col-9 {
+          padding: 0 0 0 7%;
+        }
+        p {
+          color: black;
+          margin: 1rem 0 0 0;
+          text-align: left;
+        }
+        h4 {
+          color: black;
+          margin: 0px;
+          text-align: left;
+        }
+        .imgPart {
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+    a:hover {
+      background-color: white;
+    }
+  }
   .product-def {
     background-color: $top-color;
     width: 91.66667%;
@@ -3432,28 +3470,32 @@ ul.corporate-members li {
     padding-left: 0px;
     padding-right: 0px;
   }
-  #special,
-  #special1 {
-    max-width: 33%;
-    text-align: center;
-    border: 2px solid #fff;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 16px 2rem;
-    color: #156741;
+  .des {
+    margin-top: 1rem;
+    padding-right: 5rem;
   }
   #special {
-    border-color: $top-color;
-    background-color: #fff;
-    border-color: #fff;
+    color: inherit;
+    // background-color: #fff;
+    border: 1px solid white;
+    float: left;
+    color: white;
+    height: 4.5rem;
+    width: 30%;
+    line-height: 4.5rem;
+    @include font-size(18);
+    text-decoration: none;
+    border-radius: 2px;
+    -webkit-transition: background-color 0.2s ease-out;
+    -moz-transition: background-color 0.2s ease-out;
+    -o-transition: background-color 0.2s ease-out;
+    -ms-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out;
   }
   #special:hover {
     background-color: #5ca1e0;
   }
-  #special1:hover {
-    background-color: #fff;
-  }
+
   .center {
     margin: 0 auto;
     // padding: 0 4.16667%;
@@ -3477,7 +3519,7 @@ ul.corporate-members li {
     }
     .parent {
       width: 100%;
-      height: 213px;
+      height: 233px;
       // border: 1px solid blue;
       overflow: hidden;
       position: relative;
@@ -3502,7 +3544,7 @@ ul.corporate-members li {
       .inner-text {
         height: 50%;
         width: 100%;
-        bottom: -31%;
+        bottom: -42%;
         position: absolute;
         left: 50%;
         filter: blur(0px) !important;
@@ -3604,7 +3646,6 @@ ul.corporate-members li {
         z-index: 10;
         transition: all 0.32s linear;
         p {
-          @include multiLineEllipsis(1.5rem, 3, white);
         }
         h3 {
           text-align: center;
@@ -3744,7 +3785,7 @@ ul.corporate-members li {
       }
       .carousel-item {
         padding: 0 3rem;
-        p{
+        p {
           margin-bottom: 10%;
         }
       }
@@ -4282,4 +4323,7 @@ ul.corporate-members li {
 }
 .gray-color {
   background-color: #fafafa !important;
+}
+.margin0 {
+  margin: 0 !important;
 }

@@ -76,6 +76,7 @@ urlpatterns = [
 
     # Styleguide
     path('styleguide/', TemplateView.as_view(template_name='styleguide.html'), name="styleguide"),
+    path('weblog/',TemplateView.as_view(template_name='base_blog.html'), name="weblog"),
 
     path('sitemap.xml', cache_page(60 * 60 * 6)(sitemap_views.sitemap), {'sitemaps': sitemaps}),
     path('weblog/', include('blog.urls')),

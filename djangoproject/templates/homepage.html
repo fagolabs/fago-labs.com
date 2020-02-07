@@ -3,35 +3,72 @@
 {% load static %}
 {% block sectionid %}homepage{% endblock %}
 {% block body_class %}homepage{% endblock %}
-{% block layout_class %}full-width{% endblock %}
+{% block layout_class %}full-width margin0{% endblock %}
 {% block header-classes%}product-def{% endblock %}
 {% block header %}
 <div class="container" style="overflow:hidden">
   <div class="row pt-5 pb-4">
     <div class="col-12 col-sm-12 col-md-6 ">
       <div>
-        <h1 class="bold mb-3">
+        <h1 class="bold" style="text-align:left">
           Django
         </h1>
       </div>
       <div class="row">
-        <h3 class="des ml-3 mr-3" style="text-align:left;">
+        <h3 class="des ml-4" style="text-align:left;">
           Our mission is to be the most secure, performant, scalable, and
           available cloud native repository for Kubernetes
         </h3>
       </div>
       <div class="center mt-4">
         <a href="#getting-start" id="special">Button 1</a>
-        <a href="#button2" target="_blank" id="special1">Button 2</a>
       </div>
     </div>
     <div class="col-12 col-sm-12 col-md-6 mt-3" style="background-color: rgb(165, 135, 135); height: 30rem;"></div>
   </div>
 </div>
 {% endblock %}
-
+{% block billboard %}
+<div class="container nav-small">
+  <div class="container">
+    <div class="row">
+      <a href="{% url 'research:optimized-technique' %}" class="col-12 col-md-4 center pt-4 pb-4">
+        <div class="row">
+          <div class="imgPart col-3">
+            <img src="{% static "img/logos/molecule.svg"%}" />
+          </div>
+          <div class="textPart col-9">
+            <h4>Research</h4>
+            <p>Fagolabs Research</p>
+          </div>
+        </div>
+      </a>
+      <a href="{% url 'solution:dns-server' %}" class="col-12 col-md-4 center pt-4 pb-4">
+        <div class="row">
+          <div class="imgPart col-3">
+            <img src="{% static "img/logos/research.svg"%}" />
+          </div>
+          <div class="textPart col-9">
+            <h4>Solution</h4>
+            <p>Fagolabs Solution</p>
+          </div>
+        </div>
+      </a>
+      <a href="" class="col-12 col-md-4 center pt-4 pb-4">
+        <div class="row">
+          <div class="imgPart col-3">
+            <img src="{% static "img/logos/headset.svg"%}" />
+          </div>
+          <div class="textPart col-9">
+            <h4>Services</h4>
+            <p>Fagolabs Services</p>
+          </div>
+        </div>
+      </a> </div>
+  </div>
+</div>
+{% endblock %}
 {% block content %}
-
 <div class="section mb-5 mt-5" data-aos="fade-up">
   {% comment %} <div class="container carousel-homepage">
     <h1 class="center mt-5 mb-5">Lab Introduction</h1>
@@ -390,7 +427,7 @@
     </div>
   </div>
 </div>
-<div class="container product content mt-5" >
+<div class="container product content mt-5">
   <h1 class="center" data-aos="fade-up">Fagolabs Product</h1>
   <p class="center mt-3 " data-aos="fade-up">
     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
