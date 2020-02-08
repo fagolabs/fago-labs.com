@@ -60,44 +60,37 @@
 </head>
 
 <body id="{% block sectionid %}generic{% endblock %}" class="{% block body_class %}{% endblock %}">
+
   {% include "includes/header.html" %}
 
-  <div class="copy-banner" style="padding-top: 7rem;">
+  <div class="copy-banner" style="margin-top: 7rem;">
     <div class="container {% block header-classes %}{% endblock %}">
       {% block header %}{% endblock %}
     </div>
-    </script>
-    <script src="{% static "js/lib/modernizr.js" %}"></script>
-    {% block head_extra %}{% endblock head_extra %}
-  </head>
+  </div>
+  {% block background %}{% endblock %}
+  <div id="billboard">{% block billboard %}{% endblock %}</div>
 
-  <body id="{% block sectionid %}generic{% endblock %}" class="{% block body_class %}{% endblock %}">
+  <div style="margin-top: 7rem;" class="container {% block layout_class %}{% endblock %}">
+    <div role="main">
 
-    {% include "includes/header.html" %}
+      {% block messages %}
+      {% if messages %}
+      <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>
+          {{ message }}
+          <i class="close icon icon-remove" title="close"></i>
+          </li>
+          {% endfor %}
+      </ul>
+      {% endif %}
+      {% endblock %}
 
-    <div class="copy-banner" style="margin-top: 7rem;">
-      <div class="container {% block header-classes %}{% endblock %}">
-        {% block header %}{% endblock %}
-      </div>
+      {% block content %}{% endblock %}
+      <a href="#top" class="backtotop"><i class="icon icon-chevron-up"></i> Back to Top</a>
     </div>
-    {% block background %}{% endblock %}
-    <div id="billboard">{% block billboard %}{% endblock %}</div>
 
-    <div style="margin-top: 7rem;" class="container {% block layout_class %}{% endblock %}">
-      <div role="main">
-
-        {% block messages %}
-          {% if messages %}
-            <ul class="messages">
-              {% for message in messages %}
-                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>
-                  {{ message }}
-                  <i class="close icon icon-remove" title="close"></i>
-                </li>
-              {% endfor %}
-            </ul>
-          {% endif %}
-        {% endblock %}
     {% block content-related %}{% endblock %}
     {% block content-extra %}{% endblock %}
 
