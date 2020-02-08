@@ -61,9 +61,9 @@
               <li{% if 'weblog' in request.path %} class="active" {% endif %}>
                 <a class="link" href="{% url 'weblog:index' %}">Blog</a>
                 </li>
-                <li{% if 'start' in request.path %} class="active" {% endif %}>
-                  <a class="link" href="{% url 'overview' %}">About</a>
-                  </li>
+                <li{% if 'about' in request.path %} class="active"{% endif %} >
+            <a href="{% url 'about:about' %}">About</a>
+          </li>
                   <div style="float: right !important;" class="login-reg">
                     <li>
                       <a class="link" href="{% url 'login' %}">Login</a>

@@ -257,7 +257,7 @@ THUMBNAIL_ALTERNATIVE_RESOLUTIONS = [2]
 TRAC_RPC_URL = "https://code.djangoproject.com/rpc"
 TRAC_URL = "https://code.djangoproject.com/"
 
-ALLOWED_HOSTS = ['.localhost', '127.0.0.1', 'www.127.0.0.1']
+ALLOWED_HOSTS = ['.localhost', '127.0.0.1', 'www.127.0.0.1', '125.212.204.218']
 
 LOCALE_MIDDLEWARE_EXCLUDED_HOSTS = ['docs.djangoproject.localhost']
 
@@ -290,7 +290,7 @@ DOCS_BUILD_ROOT = DATA_DIR.joinpath('djangodocs')
 
 # django-hosts settings
 
-PARENT_HOST = 'localhost:8000'
+PARENT_HOST = '125.212.204.218:8000'
 
 # django-push settings
 

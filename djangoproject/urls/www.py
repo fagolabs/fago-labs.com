@@ -87,6 +87,9 @@ urlpatterns = [
     path('research/',include('research.urls')),
     # path('solution/',TemplateView.as_view(template_name='base_solution.html'),name='solution'),
     path('solution/',include('solution.urls')),
+
+    # About
+    path('about/', include('about.urls')),
 ]
 
 if settings.DEBUG:
