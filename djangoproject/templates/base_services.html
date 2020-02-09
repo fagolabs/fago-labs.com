@@ -1,0 +1,34 @@
+{% extends "base_3col.html" %}
+{% load static %}
+{% block sectionid %}
+services
+{% endblock sectionid %}
+{% block body_class %}services{% endblock %}
+{% block layout_class %}full-width{% endblock %}{% block header %}
+<div class="pt-5 pb-4 overlay-top">
+    <h1 class="bold mb-3">
+        solution
+    </h1>
+</div>
+{% endblock %}
+{% block header-classes %}
+container--flex container--flex--wrap--mobile
+{% endblock %}
+{% comment %} {% block billboard %}
+{% endblock  %} {% endcomment %}
+{% block content %}
+<div class="container">
+    <div class="section services-info">
+        <div class="row">
+            <h1 class="center">Service Plan</h1>
+        </div>
+        {% block technical %}
+
+        {% endblock  %}
+    </div>
+    <div class="section">
+        {% block advantages %}
+        {% endblock  %}
+    </div>
+</div>
+{% endblock%}

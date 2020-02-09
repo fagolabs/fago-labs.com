@@ -458,7 +458,7 @@ blockquote {
       }
     }
     #dropdownMenuLink {
-      pointer-events: none;
+      cursor: default;
     }
     // overflow: hidden;
     .dropdown-menu {
@@ -3630,7 +3630,7 @@ ul.corporate-members li {
         margin-left: auto;
         margin-right: auto;
         width: 50%;
-        max-width: 10rem;
+        max-width: 8.5rem;
       }
       .test-text {
         // @include respond-min(710) {

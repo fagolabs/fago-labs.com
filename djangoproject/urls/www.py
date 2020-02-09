@@ -87,7 +87,9 @@ urlpatterns = [
     path('research/',include('research.urls')),
     # path('solution/',TemplateView.as_view(template_name='base_solution.html'),name='solution'),
     path('solution/',include('solution.urls')),
-
+    # path('services/',include('services.urls')),
+    # path('services/',TemplateView.as_view(template_name='base_services.html'),name='services'),
+    path('services/',include('services.urls')),
     # About
     path('about/', include('about.urls')),
 ]

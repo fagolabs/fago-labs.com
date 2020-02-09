@@ -15,3 +15,4 @@ djangoproject/static/js/lib/unveil/img
 node_modules/
 venv/
 /package-lock.json
+/data
