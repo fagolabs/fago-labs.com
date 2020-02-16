@@ -46,24 +46,41 @@
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
               <a class="dropdown-item" href="{% url 'solution:dns-server' %}">DNS Server Solution</a>
               <a class="dropdown-item" href="{% url 'solution:web-server' %}">Next-Gen Web Server</a>
+              <a class="dropdown-item" href="{% url 'solution:web-server' %}">Next-Gen Web Server</a>
               <a class="dropdown-item" href="{% url 'solution:ott-system' %}">Secured OTT System</a>
               <a class="dropdown-item" href="{% url 'solution:traffic-recognizer' %}">Traffic Recognizer</a>
               <a class="dropdown-item" href="{% url 'solution:ids-ips' %}">IDS/IPS</a>
               <a class="dropdown-item" href="{% url 'solution:virtual-firewall' %}">Virtual Firewall</a>
             </div>
           </li>
-          <li{% if 'download' in request.path %} class="active" {% endif %}>
-            <a class="link" href="{% url 'download' %}">Services</a>
-            </li>
-            <li{% if request.host.name == 'docs' %} class="active" {% endif %}>
-              <a class="link" href="{% url 'homepage' host 'docs' %}">News</a>
-              </li>
-              <li{% if 'weblog' in request.path %} class="active" {% endif %}>
-                <a class="link" href="{% url 'weblog:index' %}">Blog</a>
-                </li>
-                <li{% if 'about' in request.path %} class="active"{% endif %} >
-            <a href="{% url 'about:about' %}">About</a>
+          <li id="dropdown" class="check2 {% if 'services' in request.path %} active {% endif %}">
+            <a class="link dropdown-icon" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              <div class="title">
+                Services
+              </div>
+              <div class="dropdown-menu-mobile">
+                <a class="dropdown-item" href="{% url 'services:technical-consultant' %}">Technical Consultant</a>
+                <a class="dropdown-item" href="{% url 'services:outsourcing' %}">Outsourcing</a>
+              </div>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="{% url 'services:technical-consultant' %}">Technical Consultant</a>
+              <a class="dropdown-item" href="{% url 'services:outsourcing' %}">Outsourcing</a>
+            </div>
           </li>
+          {% comment %} <li{% if 'download' in request.path %} class="active" {% endif %}>
+            <a class="link" href="{% url 'download' %}">Services</a>
+            </li> {% endcomment %}
+            <li{% if 'weblog' in request.path %} class="active" {% endif %}>
+              <a class="link" href="{% url 'weblog:index' %}">News</a>
+              </li>
+              <li{% if 'x' in request.path %} class="active" {% endif %}>
+                <a class="link" href="{% url 'blog' %}">Blog</a>
+                </li>
+                <li{% if 'about' in request.path %} class="active" {% endif %}>
+                  <a href="{% url 'about:about' %}">About</a>
+                  </li>
                   <div style="float: right !important;" class="login-reg">
                     <li>
                       <a class="link" href="{% url 'login' %}">Login</a>

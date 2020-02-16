@@ -53,12 +53,11 @@ class Entry(models.Model):
         ),
     )
     content_format = models.CharField(choices=CONTENT_FORMAT_CHOICES, max_length=50)
+    author = models.CharField(max_length=100)
     summary = models.TextField()
     summary_html = models.TextField()
     body = models.TextField()
     body_html = models.TextField()
-    author = models.CharField(max_length=100)
-
     objects = EntryQuerySet.as_manager()
 
     class Meta:

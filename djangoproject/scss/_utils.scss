@@ -12,8 +12,8 @@ $green: #20aa76;
 $green-dark: #0c4b33;
 $green-dark-text: #3c8866;
 $white: #f1fff7;
-$footer-color: #3A60A6;
-$top-color: #669CFF;
+$footer-color: #3a60a6;
+$top-color: #5993ff;
 $warning-yellow: #fffdf1;
 $warning-dark-yellow: #0f0f0f;
 $red: #ba2121;
@@ -21,8 +21,18 @@ $red-light: #ffbaba;
 $red-dark: #6a0e0e;
 $nav-color: #0486ff;
 $font-path: "../fonts/fira-mono";
-$solution-color: #34c8e6;
+$solution-color: #42c3e8;
+$solution-title: #3D5F69;
 // @font-face declarations
+
+//test-color complementary
+$dark-blue: #3a60a6;
+$medium-light-blue: #5993ff;
+$light-blue: #73a4ff;
+$dark-yellow: #b3831b;
+$light-yellow: #ffcb59;
+
+$blue-ava: #42c3e8;
 
 @font-face {
   font-family: "Fira Mono";

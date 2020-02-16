@@ -16,6 +16,7 @@ define(["jquery"], function($) {
     });
     $("#dropdown")
       .add(".check1")
+      .add(".check2")
       .on("click", async function() {
         // console.log("a");
         if ($(this).hasClass("menu-mobile-open")) {
@@ -25,9 +26,11 @@ define(["jquery"], function($) {
           $(this).addClass("menu-mobile-open");
         }
       });
+
     async function removeNavAll() {
       $("#dropdown").removeClass("menu-mobile-open");
       $(".check1").removeClass("menu-mobile-open");
+      $(".check2").removeClass("menu-mobile-open");
     }
     var width = $(window).width();
     $(window).resize(function() {
@@ -36,6 +39,7 @@ define(["jquery"], function($) {
       if (width > 774) {
         $("#dropdown")
           .add(".check1")
+          .add(".check2")
           .hover(
             function() {
               $(this)
@@ -57,6 +61,7 @@ define(["jquery"], function($) {
     if (width > 774) {
       $("#dropdown")
         .add(".check1")
+        .add(".check2")
         .hover(
           function() {
             $(this)

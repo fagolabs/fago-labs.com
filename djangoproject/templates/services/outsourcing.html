@@ -1,4 +1,249 @@
 {% extends "base_services.html" %}
-{% block technical %}
-<div>technical</div>
+{% load static %}
+
+{% block services-plan %}
+<div class="services-carousel">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false">
+        {% comment %} <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">a</li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1">c</li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2">c</li>
+        </ol> {% endcomment %}
+        <div class="row carousel-indicators">
+            <div class="col-6 col-md-3 center active" data-target="#carouselExampleIndicators" data-slide-to="0">Web
+                Development
+            </div>
+            <div class="col-6 col-md-3 center" data-target="#carouselExampleIndicators" data-slide-to="1">Mobile App
+                Development
+            </div>
+            <div class="col-6 col-md-3 center" data-target="#carouselExampleIndicators" data-slide-to="2">C/C++
+                Application Development
+            </div>
+            <div class="col-6 col-md-3 center" data-target="#carouselExampleIndicators" data-slide-to="3">Technical
+                research
+            </div>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <h3>Overview</h3>
+                <p>Help enterprises analyze and understand the pain points of enterprise IT environment and deeply
+                    analyze
+                    the business value that container cloud can generate.
+                    Identify architecture and business flows, derive initial plans and actionable plans that accommodate
+                    your business goals.</p>
+
+                <h3>Content</h3>
+                <ul>
+                    <li>Data center architecture diagnosis</li>
+                    <li>Container cloud characteristics and situation analysis</li>
+                    <li>Consulting on microservices</li>
+                    <li>Development testing process diagnosis</li>
+                    <li>CI/CD optimization</li>
+                </ul>
+            </div>
+            <div class="carousel-item">
+                <h3>Overview</h3>
+                <p>Provide tailored plans and solutions based on a thorough scrutinization of business flow. Derive a
+                    comprehensive solution based on container cloud strategy to further achieve business goal.</p>
+
+                <h3>Content</h3>
+                <ul>
+                    <li>Data center architecture design</li>
+                    <li>Microservices application design</li>
+                    <li>Dev-testing cloud design</li>
+                    <li>CI/CD process improvement and design</li>
+                    <li>Automated operation and maintenance system design</li>
+                    <li>Container cloud solution design</li>
+                </ul>
+            </div>
+            <div class="carousel-item">
+                <h3>Overview</h3>
+                <p>Consulting and problem solving during the period of on-premise cloud containerization implementation
+                    and service. Training and technical support to augment enterprises’ capability to build
+                    production-level cloud.</p>
+                <h3>Content</h3>
+                <ul>
+                    <li>Development and testing optimization</li>
+                    <li>Operation and maintenance optimization</li>
+                    <li>Container Cloud Training</li>
+                    <li>Cloud platform performance optimization</li>
+                    <li>Advanced technical support</li>
+                    <li>Project implementation management service</li>
+                </ul>
+            </div>
+            <div class="carousel-item">
+                <h3>Overview</h3>
+                <p>Help enterprises analyze and understand the pain points of enterprise IT environment and deeply
+                    analyze
+                    the business value that container cloud can generate.
+                    Identify architecture and business flows, derive initial plans and actionable plans that accommodate
+                    your business goals.</p>
+
+                <h3>Content</h3>
+                <ul>
+                    <li>Data center architecture diagnosis</li>
+                    <li>Container cloud characteristics and situation analysis</li>
+                    <li>Consulting on microservices</li>
+                    <li>Development testing process diagnosis</li>
+                    <li>CI/CD optimization</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock  %}
+{% block advantages %}
+<div class="row">
+    <div class="col-6 col-md-3 advance-key">
+        <div class="advance-inside center">
+            <p>Key partner of Cyclone Cargo project
+        </div>
+        </p>
+    </div>
+    <div class="col-6 col-md-3 advance-key">
+        <div class="advance-inside center">
+            <p>Officially authorized organizer of Certified Kubernetes Admin (CKA) training
+                in mainland
+                China</p>
+        </div>
+    </div>
+    <div class="col-6 col-md-3 advance-key">
+        <div class="advance-inside center">
+            <p>CNCF (Cloud Native Computing Foundation) official partner
+        </div>
+        </p>
+    </div>
+    <div class="col-6 col-md-3 advance-key">
+        <div class="advance-inside center">
+            <p>Caicloud contributes to the official Kubernetes project, ranking among top
+                20 globally
+                with its own open-sourced CI/CD tool</p>
+        </div>
+    </div>
+    <div class="col-6 col-md-3 advance-key">
+        <div class="advance-inside center">
+            <p>Key partner of Cyclone Cargo project
+        </div>
+        </p>
+    </div>
+    <div class="col-6 col-md-3 advance-key">
+        <div class="advance-inside center">
+            <p>Officially authorized organizer of Certified Kubernetes Admin (CKA) training
+                in mainland
+                China</p>
+        </div>
+    </div>
+    <div class="col-6 col-md-3 advance-key">
+        <div class="advance-inside center">
+            <p>CNCF (Cloud Native Computing Foundation) official partner
+        </div>
+        </p>
+    </div>
+    <div class="col-6 col-md-3 advance-key">
+        <div class="advance-inside center">
+            <p>Caicloud contributes to the official Kubernetes project, ranking among top
+                20 globally
+                with its own open-sourced CI/CD tool</p>
+        </div>
+    </div>
+</div>
+{% endblock  %}
+{% block process %}
+<div class="row outer">
+    <span class="process-item">
+        <img class="icon-step" src="{% static "img/services/one (1).svg" %}" />
+        <span class="arrow"></span>
+        <span class="text-inside">Project Establishment</span>
+    </span>
+    <span class="process-item">
+        <img class="icon-step" src="{% static "img/services/two.svg" %}" />
+        <span class="arrow"></span>
+        <span class="text-inside">Investigation and Analysis</span>
+    </span>
+    <span class="process-item">
+        <img class="icon-step" src="{% static "img/services/three.svg" %}" />
+        <span class="arrow"></span>
+        <span class="text-inside">Project Design</span>
+    </span>
+    <span class="process-item">
+        <img class="icon-step" src="{% static "img/services/four.svg" %}" />
+        <span class="arrow"></span>
+        <span class="text-inside">Project Implementation</span>
+    </span>
+    <span class="process-item">
+        <img class="icon-step" src="{% static "img/services/five.svg" %}" />
+        <span class="text-inside">Project Acceptance</span>
+    </span>
+</div>
+{% endblock  %}
+{% block technologies %}
+<div class="row">
+    <div class="col-4 col-md-2 tech-icon">
+        <div class="icon-wrap">
+            <img class="icon-inside center ball" src="{% static "img/services/nodejs-original.svg" %}" />
+            <h3>NodeJs</h3>
+        </div>
+    </div>
+    <div class="col-4 col-md-2 tech-icon">
+        <div class="icon-wrap">
+            <img class="icon-inside center ball" src="{% static "img/services/angularjs-original.svg" %}" />
+            <h3>Angular</h3>
+        </div>
+    </div>
+    <div class="col-4 col-md-2 tech-icon">
+        <div class="icon-wrap">
+            <img class="icon-inside center ball" src="{% static "img/services/vuejs-original.svg" %}" />
+            <h3>VueJs</h3>
+        </div>
+    </div>
+    <div class="col-4 col-md-2 tech-icon">
+        <div class="icon-wrap">
+            <img class="icon-inside center ball" src="{% static "img/services/app-store-ios-brands.svg" %}" />
+            <h3>Ios App</h3>
+        </div>
+    </div>
+    <div class="col-4 col-md-2 tech-icon">
+        <div class="icon-wrap">
+            <img class="icon-inside center rotate" src="{% static "img/services/react-original.svg" %}" />
+            <h3>React</h3>
+        </div>
+    </div>
+    <div class="col-4 col-md-2 tech-icon">
+        <div class="icon-wrap">
+            <img class="icon-inside center ball" src="{% static "img/services/android-original.svg" %}" />
+            <h3>Android App</h3>
+        </div>
+    </div>
+    <div class="col-4 col-md-2 tech-icon">
+        <div class="icon-wrap">
+            <img class="icon-inside center ball" src="{% static "img/services/cplusplus-original.svg" %}" />
+            <h3>C++</h3>
+        </div>
+    </div>
+    <div class="col-4 col-md-2 tech-icon">
+        <div class="icon-wrap">
+            <img class="icon-inside center ball" src="{% static "img/logos/django-logo-negative.svg" %}" />
+            <h3>Django</h3>
+        </div>
+    </div>
+    <div class="col-4 col-md-2 tech-icon">
+        <div class="icon-wrap">
+            <img class="icon-inside center ball" src="{% static "img/services/mongodb-original.svg" %}" />
+            <h3>MongoDB</h3>
+        </div>
+    </div>
+    <div class="col-4 col-md-2 tech-icon">
+        <div class="icon-wrap">
+            <img class="icon-inside center ball" src="{% static "img/services/docker-original.svg" %}" />
+            <h3>Docker</h3>
+        </div>
+    </div>
+    <div class="col-4 col-md-2 tech-icon">
+        <div class="icon-wrap">
+            <img class="icon-inside center ball" src="{% static "img/services/mysql-original.svg" %}" />
+            <h3>MySQL</h3>
+        </div>
+    </div>
+</div>
 {% endblock  %}

@@ -76,7 +76,7 @@ urlpatterns = [
 
     # Styleguide
     path('styleguide/', TemplateView.as_view(template_name='styleguide.html'), name="styleguide"),
-    path('weblog/',TemplateView.as_view(template_name='base_blog.html'), name="weblog"),
+    # path('weblog/',TemplateView.as_view(template_name='base_blog.html'), name="weblog"),
 
     path('sitemap.xml', cache_page(60 * 60 * 6)(sitemap_views.sitemap), {'sitemaps': sitemaps}),
     path('weblog/', include('blog.urls')),
@@ -87,9 +87,10 @@ urlpatterns = [
     path('research/',include('research.urls')),
     # path('solution/',TemplateView.as_view(template_name='base_solution.html'),name='solution'),
     path('solution/',include('solution.urls')),
-    # path('services/',include('services.urls')),
-    # path('services/',TemplateView.as_view(template_name='base_services.html'),name='services'),
+
     path('services/',include('services.urls')),
+    # path('services/',TemplateView.as_view(template_name='base_services.html'),name='services'),
+    path('blog/',TemplateView.as_view(template_name='base.html'),name="blog"),
     # About
     path('about/', include('about.urls')),
 ]
