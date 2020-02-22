@@ -7,8 +7,7 @@
       <ul style="width: 100%;">
         <div>
           <li id="dropdown" {% if 'research' in request.path %} class="active" {% endif %}>
-            <a class="link dropdown-icon" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">
+            <a class="link dropdown-icon" id="dropdownMenuLink" data-toggle="dropdown" >
               <div class="title">
                 Research
               </div>
@@ -29,8 +28,7 @@
             </div>
           </li>
           <li id="dropdown" class="check1 {% if 'solution' in request.path %} active {% endif %}">
-            <a class="link dropdown-icon" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">
+            <a class="link dropdown-icon" id="dropdownMenuLink2" data-toggle="dropdown" >
               <div class="title">
                 Solution
               </div>
@@ -43,7 +41,7 @@
                 <a class="dropdown-item" href="{% url 'solution:virtual-firewall' %}">Virtual Firewall</a>
               </div>
             </a>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
               <a class="dropdown-item" href="{% url 'solution:dns-server' %}">DNS Server Solution</a>
               <a class="dropdown-item" href="{% url 'solution:web-server' %}">Next-Gen Web Server</a>
               <a class="dropdown-item" href="{% url 'solution:web-server' %}">Next-Gen Web Server</a>
@@ -54,8 +52,7 @@
             </div>
           </li>
           <li id="dropdown" class="check2 {% if 'services' in request.path %} active {% endif %}">
-            <a class="link dropdown-icon" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">
+            <a class="link dropdown-icon" id="dropdownMenuLink3" data-toggle="dropdown" >
               <div class="title">
                 Services
               </div>
@@ -64,7 +61,7 @@
                 <a class="dropdown-item" href="{% url 'services:outsourcing' %}">Outsourcing</a>
               </div>
             </a>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink3">
               <a class="dropdown-item" href="{% url 'services:technical-consultant' %}">Technical Consultant</a>
               <a class="dropdown-item" href="{% url 'services:outsourcing' %}">Outsourcing</a>
             </div>
@@ -82,12 +79,34 @@
                   <a href="{% url 'about:about' %}">About</a>
                   </li>
                   <div style="float: right !important;" class="login-reg">
+                    {% if user.is_authenticated %}
+                    <li id="dropdown" class="check2 ">
+                      <a class="link dropdown-icon" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        <div class="title">
+                          Welcome <span style="font-style: italic">{{user.username}}</span>,
+                        </div>
+                        <div class="dropdown-menu-mobile">
+                          <a class="dropdown-item" href="{% url 'edit_profile' %}">
+                          Edit Profile</a>
+                          <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+                        </div>
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="{% url 'edit_profile' %}">
+                        Edit Profile</a>
+                        <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+                      </div>
+                    </li>
+                    {% else %}
                     <li>
                       <a class="link" href="{% url 'login' %}">Login</a>
                     </li>
                     <li>
-                      <a class="link" href="{% url 'homepage' %}">Sign up</a>
+                      <a class="link" href="{% url 'registration_register' %}">Sign up</a>
                     </li>
+                    {% endif %}
+
                     <!-- <li>
               <a >
                 <img style="width: 30px; height: 24px;"

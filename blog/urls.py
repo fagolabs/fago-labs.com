@@ -1,4 +1,6 @@
 from django.urls import path
+from django.views.generic import RedirectView,TemplateView
+
 
 from . import views
 
@@ -29,4 +31,6 @@ urlpatterns = [
         views.BlogArchiveIndexView.as_view(),
         name="index"
     ),
+    path('search/',views.search,
+        name="search")
 ]

@@ -9,6 +9,8 @@ from django.utils.cache import _generate_cache_header_key
 from django.utils.translation import ugettext_lazy as _
 from django_hosts.resolvers import reverse
 from docutils.core import publish_parts
+from django.contrib.postgres.search import SearchVectorField
+
 
 BLOG_DOCUTILS_SETTINGS = {
     'doctitle_xform': False,
@@ -54,8 +56,8 @@ class Entry(models.Model):
     )
     content_format = models.CharField(choices=CONTENT_FORMAT_CHOICES, max_length=50)
     author = models.CharField(max_length=100)
-    summary = models.TextField()
-    summary_html = models.TextField()
+    summary = models.TextField(max_length=500)
+    summary_html = models.TextField(max_length=500)
     body = models.TextField()
     body_html = models.TextField()
     objects = EntryQuerySet.as_manager()

@@ -30,7 +30,8 @@ def edit_profile(request):
     form = ProfileForm(request.POST or None, instance=profile)
     if form.is_valid():
         form.save()
-        return redirect('user_profile', request.user.username)
+        # return redirect('user_profile', request.user.username)
+        return redirect('homepage')
     return render(request, "accounts/edit_profile.html", {'form': form})
 
 

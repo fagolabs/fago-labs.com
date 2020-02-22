@@ -2,9 +2,23 @@
 {% load weblog fundraising_extras %}
 {% block layout_class %}sidebar-right{% endblock %}
 {% block title %}News &amp; Events{% endblock %}
-
-{% block header %}
-<h1><a href="{% url 'weblog:index' %}">News &amp; Events</a></h1>
+{% block body_class %}weblog{% endblock %}
+{% block billboard %}
+<div class='container mobile-search' style="display:none" data-aos="fade-up">
+  <form action="/weblog/search/" class="search search-blog form-input" method='get' role="search">
+    {% comment %} {% csrf_token %} {% endcomment %}
+    {% comment %} <input for="id_s" name="s" class="form-control mr-sm-2" type="search" placeholder="Search"
+      aria-label="Search"> {% endcomment %}
+    <label class="visuallyhidden" for="id_s">Search:</label>
+    {% comment %} <input name="id_p"> {% endcomment %}
+    {{ form.as_p }}
+    <button type="submit" style="display: inline">
+      <i class="icon icon-search"></i>
+    <span class="visuallyhidden">Search</span>
+    </button>
+  </form>
+</div>
+{% endblock  %} {% block header %} <h1><a href="{% url 'weblog:index' %}">News &amp; Events</a></h1>
 {% endblock %}
 
 {% block head_extra %}
@@ -13,12 +27,19 @@
 
 {% block content-related %}
 <h1 class="visuallyhidden">Additional Information</h1>
-<div role="complementary">
+<div role="complementary" >
   {% donation_snippet %}
-  <form action="{% url 'news-search' host 'weblog' %}" class="search form-input"
-    role="search">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  <form action="/weblog/search/" class="search search-blog form-input" method='get' role="search">
+    {% comment %} {% csrf_token %} {% endcomment %}
+    {% comment %} <input for="id_s" name="s" class="form-control mr-sm-2" type="search" placeholder="Search"
+      aria-label="Search"> {% endcomment %}
+    <label class="visuallyhidden" for="id_s">Search:</label>
+    {% comment %} <input name="id_p"> {% endcomment %}
+    {{ form.as_p }}
+    <button type="submit" style="display: inline">
+      <i class="icon icon-search"></i>
+      <span class="visuallyhidden">Search</span>
+    </button>
   </form>
 
   {% if events %}

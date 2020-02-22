@@ -1,0 +1,20 @@
+{% extends "base_weblog.html" %}
+{% block content %}
+<div class="container search-new">
+    <div class="row">
+        <h2>
+            There are {{count}} results for
+            <span style="font-style: italic;">{{query}}</span>
+        </h2>
+    </div>
+    {% comment %} <p>Test</p> {% endcomment %}
+    {% if count == 0 %}
+        <div>Let try another keyword</div>
+    {% else %}
+    {% for object in results %}
+    {% include 'blog/news_summary.html' with object=object %}
+    {% endfor %}
+    {% endif %}
+
+</div>
+{% endblock  %}

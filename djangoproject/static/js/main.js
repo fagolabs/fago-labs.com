@@ -35,7 +35,7 @@ define(["jquery"], function($) {
     var width = $(window).width();
     $(window).resize(function() {
       width = $(window).width();
-      console.log(width);
+      // console.log(width);
       if (width > 774) {
         $("#dropdown")
           .add(".check1")
@@ -160,6 +160,9 @@ define(["jquery"], function($) {
       };
     }
     return !!document.getElementsByClassName(className).length; //return a boolean
+  }
+  if (hasClass("weblog")) {
+    mods.push("mod/weblog");
   }
   if (hasClass("research")) {
     mods.push("mod/research");

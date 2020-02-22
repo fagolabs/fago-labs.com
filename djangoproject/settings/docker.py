@@ -198,7 +198,9 @@ TEMPLATES = [
     },
 ]
 
-TIME_ZONE = 'America/Chicago'
+# TIME_ZONE = 'America/Chicago'
+
+TIME_ZONE = 'Asia/Vientiane'
 
 USE_I18N = True
 

@@ -2763,7 +2763,7 @@ form {
     cursor: auto;
     display: block;
     font-weight: 400;
-    height: 30px;
+    height: 35px;
     margin: 10px 0px;
     padding: 6px 14% 8px 10px;
     text-indent: 0;
@@ -2771,8 +2771,8 @@ form {
     width: 83%;
 
     @include respond-min(768px) {
-      padding: 6px 18% 8px 10px;
-      width: 80%;
+      padding: 6px 20% 8px 10px;
+      width: 85%;
     }
 
     &::-ms-clear {
@@ -2860,11 +2860,11 @@ form {
     background: none;
     border: none;
     color: $green-medium;
-    height: 40px;
+    height: 100% !important;
     padding: 0;
     position: absolute;
     right: 2%;
-    top: 6%;
+    top: 0 !important;
     width: 40px;
 
     @include respond-min(768px) {
@@ -2891,7 +2891,7 @@ form {
     input[type="search"],
     input[type="text"],
     input[type="email"] {
-      height: 20px;
+      // height: 20px;
       @include font-size(14);
     }
     button {
@@ -2964,6 +2964,7 @@ div[role="main"] {
 
 //------------------- Pagination
 .nav-pagination {
+  width: 100%;
   // Pagination style for use with the News & Events pages.
   @include sans-serif;
   @include font-size(14);
@@ -3842,7 +3843,7 @@ ul.corporate-members li {
     margin-top: 2rem;
   }
   .research-nav {
-    @include transitionBounce(#41C4E8);
+    @include transitionBounce(#41c4e8);
 
     // a:hover {
     //   background-color: #124191 !important;
@@ -3854,7 +3855,7 @@ ul.corporate-members li {
     //   }
     // }
     #active {
-      background-color: #3D5F69;
+      background-color: #3d5f69;
       .icon-nav {
         filter: brightness(0) invert(1);
       }
@@ -4765,5 +4766,14 @@ ul.corporate-members li {
         }
       }
     }
+  }
+}
+
+.search-new {
+  .row {
+    margin-left: 0;
+  }
+  li {
+    list-style: none;
   }
 }
