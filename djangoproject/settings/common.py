@@ -134,7 +134,7 @@ LOGGING = {
     }
 }
 
-LOGIN_REDIRECT_URL = 'edit_profile'
+LOGIN_REDIRECT_URL = '/weblog'
 
 MEDIA_URL = '/m/'
 

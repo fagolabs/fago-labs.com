@@ -14,7 +14,7 @@
     {{ form.as_p }}
     <button type="submit" style="display: inline">
       <i class="icon icon-search"></i>
-    <span class="visuallyhidden">Search</span>
+      <span class="visuallyhidden">Search</span>
     </button>
   </form>
 </div>
@@ -27,7 +27,7 @@
 
 {% block content-related %}
 <h1 class="visuallyhidden">Additional Information</h1>
-<div role="complementary" >
+<div role="complementary">
   {% donation_snippet %}
   <form action="/weblog/search/" class="search search-blog form-input" method='get' role="search">
     {% comment %} {% csrf_token %} {% endcomment %}
@@ -71,12 +71,18 @@
   <h2><span>Archives</span></h2>
   {% render_month_links %}
 
-  <h2><span>RSS Feeds</span></h2>
-  <ul class="list-links-small rss-list">
+  <h2><span>Lastest News</span></h2>
+  {% comment %} <ul class="list-links-small rss-list">
     <li><a href="{% url 'weblog-feed' %}">Latest news entries</a></li>
     <li><a
         href="https://code.djangoproject.com/timeline?daysback=90&max=50&wiki=on&ticket=on&changeset=on&milestone=on&format=rss">Recent
         code changes</a></li>
+  </ul> {% endcomment %}
+  <ul class="list-links-small rss-list">
+    {% for object in latestEntry|slice:":5" %}
+    <li >
+      <a href="{{ object.get_absolute_url }}">{{ object.headline|safe }}</a>
+    </li>
+    {% endfor %}
   </ul>
-</div>
-{% endblock %}
+</div> {% endblock %}

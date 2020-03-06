@@ -575,7 +575,7 @@ blockquote {
 
     &.active {
       opacity: 0.5;
-    }
+    }     
   }
   .dropdown-menu-mobile {
     display: none;
@@ -584,7 +584,7 @@ blockquote {
     #dropdownMenuLink {
       padding-bottom: 10px;
     }
-    .menu-mobile-open {
+    .show {
       .dropdown-menu-mobile {
         max-height: 500px !important;
       }
@@ -599,7 +599,6 @@ blockquote {
     }
     max-height: 0;
     overflow: hidden;
-
     -webkit-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
     @include respond-max(774px) {
@@ -4777,3 +4776,4 @@ ul.corporate-members li {
     list-style: none;
   }
 }
+

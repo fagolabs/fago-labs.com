@@ -4,60 +4,20 @@ define(["jquery"], function($) {
   var mods = [
     "mod/mobile-menu" // require mobile menu automatically
   ];
-
-  $(document).ready(function() {
-    $(window).scroll(function() {
-      // console.log($("[role=banner]").offset().top);
-      if ($("[role=banner]").offset().top == 0) {
-        $("[role=banner]").removeClass("scroll");
-      } else {
-        $("[role=banner]").addClass("scroll");
-      }
-    });
-    $("#dropdown")
-      .add(".check1")
-      .add(".check2")
-      .on("click", async function() {
-        // console.log("a");
-        if ($(this).hasClass("menu-mobile-open")) {
-          $(this).removeClass("menu-mobile-open");
-        } else {
-          await removeNavAll();
-          $(this).addClass("menu-mobile-open");
-        }
-      });
-
-    async function removeNavAll() {
-      $("#dropdown").removeClass("menu-mobile-open");
-      $(".check1").removeClass("menu-mobile-open");
-      $(".check2").removeClass("menu-mobile-open");
+  
+  $(window).scroll(function() {
+    // console.log($("[role=banner]").offset().top);
+    if ($("[role=banner]").offset().top == 0) {
+      $("[role=banner]").removeClass("scroll");
+    } else {
+      $("[role=banner]").addClass("scroll");
     }
-    var width = $(window).width();
-    $(window).resize(function() {
-      width = $(window).width();
-      // console.log(width);
-      if (width > 774) {
-        $("#dropdown")
-          .add(".check1")
-          .add(".check2")
-          .hover(
-            function() {
-              $(this)
-                .find(".dropdown-menu")
-                .stop(true, true)
-                .delay(200)
-                .slideDown(200);
-            },
-            function() {
-              $(this)
-                .find(".dropdown-menu")
-                .stop(true, true)
-                .delay(200)
-                .fadeOut(200);
-            }
-          );
-      }
-    });
+  });
+
+  var width = $(window).width();
+  $(window).resize(function() {
+    width = $(window).width();
+    // console.log(width);
     if (width > 774) {
       $("#dropdown")
         .add(".check1")
@@ -80,6 +40,27 @@ define(["jquery"], function($) {
         );
     }
   });
+  if (width > 774) {
+    $("#dropdown")
+      .add(".check1")
+      .add(".check2")
+      .hover(
+        function() {
+          $(this)
+            .find(".dropdown-menu")
+            .stop(true, true)
+            .delay(200)
+            .slideDown(200);
+        },
+        function() {
+          $(this)
+            .find(".dropdown-menu")
+            .stop(true, true)
+            .delay(200)
+            .fadeOut(200);
+        }
+      );
+  }
   // $(document).ready(function() {
   // console.log(
   //   $("#carouselExampleIndicators")

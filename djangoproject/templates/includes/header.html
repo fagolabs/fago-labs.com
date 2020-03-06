@@ -6,8 +6,9 @@
     <div role="navigation">
       <ul style="width: 100%;">
         <div>
-          <li id="dropdown" {% if 'research' in request.path %} class="active" {% endif %}>
-            <a class="link dropdown-icon" id="dropdownMenuLink" data-toggle="dropdown" >
+          <li id="dropdown" class="check {% if 'research' in request.path %}active{% endif %}">
+            <a class="link dropdown-icon" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
               <div class="title">
                 Research
               </div>
@@ -28,7 +29,8 @@
             </div>
           </li>
           <li id="dropdown" class="check1 {% if 'solution' in request.path %} active {% endif %}">
-            <a class="link dropdown-icon" id="dropdownMenuLink2" data-toggle="dropdown" >
+            <a class="link dropdown-icon" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
               <div class="title">
                 Solution
               </div>
@@ -41,7 +43,7 @@
                 <a class="dropdown-item" href="{% url 'solution:virtual-firewall' %}">Virtual Firewall</a>
               </div>
             </a>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
               <a class="dropdown-item" href="{% url 'solution:dns-server' %}">DNS Server Solution</a>
               <a class="dropdown-item" href="{% url 'solution:web-server' %}">Next-Gen Web Server</a>
               <a class="dropdown-item" href="{% url 'solution:web-server' %}">Next-Gen Web Server</a>
@@ -52,7 +54,8 @@
             </div>
           </li>
           <li id="dropdown" class="check2 {% if 'services' in request.path %} active {% endif %}">
-            <a class="link dropdown-icon" id="dropdownMenuLink3" data-toggle="dropdown" >
+            <a class="link dropdown-icon" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
               <div class="title">
                 Services
               </div>
@@ -61,53 +64,53 @@
                 <a class="dropdown-item" href="{% url 'services:outsourcing' %}">Outsourcing</a>
               </div>
             </a>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink3">
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
               <a class="dropdown-item" href="{% url 'services:technical-consultant' %}">Technical Consultant</a>
               <a class="dropdown-item" href="{% url 'services:outsourcing' %}">Outsourcing</a>
             </div>
           </li>
-          {% comment %} <li{% if 'download' in request.path %} class="active" {% endif %}>
-            <a class="link" href="{% url 'download' %}">Services</a>
-            </li> {% endcomment %}
-            <li{% if 'weblog' in request.path %} class="active" {% endif %}>
-              <a class="link" href="{% url 'weblog:index' %}">News</a>
+          {% comment %} test {% endcomment %}
+
+          {% comment %} Test end {% endcomment %}
+          <li{% if 'weblog' in request.path %} class="active" {% endif %}>
+            <a class="link" href="{% url 'weblog:index' %}">News</a>
+            </li>
+            <li{% if 'x' in request.path %} class="active" {% endif %}>
+              <a class="link" href="{% url 'blog' %}">Blog</a>
               </li>
-              <li{% if 'x' in request.path %} class="active" {% endif %}>
-                <a class="link" href="{% url 'blog' %}">Blog</a>
+              <li{% if 'about' in request.path %} class="active" {% endif %}>
+                <a href="{% url 'about:about' %}">About</a>
                 </li>
-                <li{% if 'about' in request.path %} class="active" {% endif %}>
-                  <a href="{% url 'about:about' %}">About</a>
-                  </li>
-                  <div style="float: right !important;" class="login-reg">
-                    {% if user.is_authenticated %}
-                    <li id="dropdown" class="check2 ">
-                      <a class="link dropdown-icon" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false">
-                        <div class="title">
-                          Welcome <span style="font-style: italic">{{user.username}}</span>,
-                        </div>
-                        <div class="dropdown-menu-mobile">
-                          <a class="dropdown-item" href="{% url 'edit_profile' %}">
-                          Edit Profile</a>
-                          <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
-                        </div>
-                      </a>
-                      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <div style="float: right !important;" class="login-reg">
+                  {% if user.is_authenticated %}
+                  <li id="dropdown" class="check2 ">
+                    <a class="link dropdown-icon" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                      aria-expanded="false">
+                      <div class="title">
+                        Welcome <span style="font-style: italic">{{user.username}}</span>,
+                      </div>
+                      <div class="dropdown-menu-mobile">
                         <a class="dropdown-item" href="{% url 'edit_profile' %}">
-                        Edit Profile</a>
+                          Edit Profile</a>
                         <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
                       </div>
-                    </li>
-                    {% else %}
-                    <li>
-                      <a class="link" href="{% url 'login' %}">Login</a>
-                    </li>
-                    <li>
-                      <a class="link" href="{% url 'registration_register' %}">Sign up</a>
-                    </li>
-                    {% endif %}
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <a class="dropdown-item" href="{% url 'edit_profile' %}">
+                        Edit Profile</a>
+                      <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+                    </div>
+                  </li>
+                  {% else %}
+                  <li>
+                    <a class="link" href="{% url 'login' %}">Login</a>
+                  </li>
+                  <li>
+                    <a class="link" href="{% url 'registration_register' %}">Sign up</a>
+                  </li>
+                  {% endif %}
 
-                    <!-- <li>
+                  <!-- <li>
               <a >
                 <img style="width: 30px; height: 24px;"
                 src="{% static "img/logos/globe-asia-solid.svg"%}">
@@ -117,7 +120,7 @@
                 >EN</span>
               </a>
             </li>  -->
-                  </div>
+                </div>
         </div>
 
       </ul>
